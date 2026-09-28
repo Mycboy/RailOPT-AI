@@ -8,6 +8,7 @@ import ConflictView from './components/ConflictView';
 import ScenarioSandbox from './components/ScenarioSandbox';
 import AnalyticsView from './components/AnalyticsView';
 import BenchmarkView from './components/BenchmarkView';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import { apiService } from './services/api';
 import { 
   Sparkles, 
@@ -17,10 +18,14 @@ import {
   Layers, 
   AlertTriangle, 
   TrainTrack,
-  Award
+  Award,
+  KeyRound,
+  ShieldCheck,
+  UserCheck
 } from 'lucide-react';
 
-export default function App() {
+function DashboardContent() {
+  const { currentUser, notification, isController, isPWay, isOHE, isSafety } = useAuth();
   const [horizon, setHorizon] = useState('weekly');
   const [activeTab, setActiveTab] = useState('benchmark');
   const [isOptimizing, setIsOptimizing] = useState(false);
@@ -121,7 +126,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
-      {/* Top Navigation */}
+      {/* Top Navigation with RBAC */}
       <Navbar
         horizon={horizon}
         onHorizonChange={handleHorizonChange}
@@ -130,10 +135,26 @@ export default function App() {
         activeTab={activeTab}
         onTabChange={setActiveTab}
         status={systemStatus}
+        onTaskCreated={() => fetchData(horizon)}
       />
 
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Role Context Bar if not Controller */}
+        {!isController && currentUser && (
+          <div className="mb-4 p-2.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-amber-300 flex items-center justify-between text-xs animate-in fade-in duration-200">
+            <div className="flex items-center space-x-2">
+              <UserCheck className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>
+                Active Session: <strong>{currentUser.full_name}</strong> ({currentUser.designation}). You can file departmental block requests; global timetable re-optimization is restricted to the Section Controller.
+              </span>
+            </div>
+            <span className="font-mono text-[10px] bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 font-bold uppercase">
+              {currentUser.role.replace('_ENGINEER', '').replace('_AUDITOR', '')} MODE
+            </span>
+          </div>
+        )}
+
         {/* KPI Overview Strip */}
         <KPICards
           kpis={kpis}
@@ -226,6 +247,19 @@ export default function App() {
         </div>
       </main>
 
+      {/* Floating Role Switch Notification Toast */}
+      {notification && (
+        <div className="fixed bottom-6 right-6 z-50 glass-panel border border-blue-500/40 bg-slate-950/95 p-4 rounded-xl shadow-2xl flex items-start space-x-3 max-w-md animate-in slide-in-from-bottom duration-200">
+          <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+            <KeyRound className="w-4 h-4" />
+          </div>
+          <div>
+            <h4 className="text-xs font-bold text-white">{notification.title}</h4>
+            <p className="text-[11px] text-slate-300 mt-0.5 leading-snug">{notification.message}</p>
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950/80 py-4 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-2">
@@ -234,5 +268,13 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <DashboardContent />
+    </AuthProvider>
   );
 }

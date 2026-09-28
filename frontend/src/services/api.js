@@ -11,7 +11,48 @@ const client = axios.create({
   },
 });
 
+// Automatic JWT Bearer token injection
+client.interceptors.request.use((config) => {
+  const token = localStorage.getItem('optrail_jwt_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 export const apiService = {
+  // Authentication & RBAC
+  getDemoUsers: async () => {
+    const response = await client.get('/auth/demo-users');
+    return response.data;
+  },
+
+  login: async (username, password) => {
+    const response = await client.post('/auth/login', { username, password });
+    if (response.data?.access_token) {
+      localStorage.setItem('optrail_jwt_token', response.data.access_token);
+    }
+    return response.data;
+  },
+
+  getMe: async () => {
+    const response = await client.get('/auth/me');
+    return response.data;
+  },
+
+  switchRole: async (username) => {
+    const response = await client.post('/auth/switch-role', { username });
+    if (response.data?.access_token) {
+      localStorage.setItem('optrail_jwt_token', response.data.access_token);
+    }
+    return response.data;
+  },
+
+  createTask: async (taskData) => {
+    const response = await client.post('/tasks', taskData);
+    return response.data;
+  },
+
   // Health & Root Status
   getStatus: async () => {
     try {

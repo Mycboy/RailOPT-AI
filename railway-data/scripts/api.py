@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
-from fastapi import FastAPI, Query, HTTPException, BackgroundTasks
+from fastapi import FastAPI, Query, HTTPException, BackgroundTasks, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -13,6 +13,12 @@ from scenario_engine import ScenarioEngine
 from benchmark_engine import BenchmarkEngine
 from candidate_scorer import parse_datetime
 from railway_operations_cost import calculate_operations_cost
+from auth import (
+    LoginRequest, SwitchRoleRequest, TokenResponse,
+    create_access_token, verify_password, USERS_DB,
+    get_user_profile, get_current_user, require_roles, require_permission,
+    RailwayRoles
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -91,6 +97,76 @@ class ScenarioRequest(BaseModel):
     horizon: Optional[str] = Field(default="weekly", description="Planning horizon: 'daily', 'weekly', or 'monthly'")
 
 
+class CreateTaskRequest(BaseModel):
+    asset_id: str = Field(..., description="Target Asset ID e.g. AST001")
+    task_type: str = Field(..., description="e.g. Ultrasonic Flaw Detection (USFD)")
+    department_id: str = Field(..., description="DEP001 (P-Way), DEP002 (OHE), or DEP003 (S&T)")
+    duration_minutes: int = Field(default=60, description="Duration in minutes")
+    priority: int = Field(default=2, description="1=Critical, 2=High, 3=Medium")
+    deadline_hours: int = Field(default=48, description="Hours until deadline")
+    description: Optional[str] = "Routine maintenance block request"
+
+
+# -------------------------------------------------------------
+# AUTHENTICATION & RBAC ENDPOINTS
+# -------------------------------------------------------------
+
+@app.post("/auth/login", response_model=TokenResponse)
+def login(req: LoginRequest):
+    """
+    Authenticates railway personnel via username and password.
+    Returns signed JWT access token and user role profile.
+    """
+    user = USERS_DB.get(req.username)
+    if not user or not verify_password(req.password, user["password_hash"]):
+        raise HTTPException(status_code=401, detail="Invalid username or password. Please verify credentials.")
+    token = create_access_token({"sub": user["username"], "role": user["role"]})
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": get_user_profile(user)
+    }
+
+
+@app.get("/auth/me")
+def get_me(current_user: dict = Depends(get_current_user)):
+    """
+    Returns active user profile, division, and permissions from JWT token.
+    """
+    return {"user": current_user}
+
+
+@app.get("/auth/demo-users")
+def get_demo_users():
+    """
+    Returns pre-configured Indian Railways personas with instantaneous demo tokens
+    for one-click switching during hackathon / executive presentations.
+    """
+    demo_list = []
+    for uname, u in USERS_DB.items():
+        token = create_access_token({"sub": uname, "role": u["role"]})
+        profile = get_user_profile(u)
+        profile["token"] = token
+        demo_list.append(profile)
+    return {"demo_users": demo_list}
+
+
+@app.post("/auth/switch-role", response_model=TokenResponse)
+def switch_role(req: SwitchRoleRequest):
+    """
+    Instant role switch helper for live demonstrations.
+    """
+    user = USERS_DB.get(req.username)
+    if not user:
+        raise HTTPException(status_code=404, detail="Railway persona not found.")
+    token = create_access_token({"sub": user["username"], "role": user["role"]})
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": get_user_profile(user)
+    }
+
+
 # -------------------------------------------------------------
 # 1. CORE ENDPOINTS
 # -------------------------------------------------------------
@@ -112,6 +188,9 @@ def get_root():
             "solve_time_sec": state.latest_schedule_result.get("summary", {}).get("solve_time_seconds", 0)
         },
         "endpoints": {
+            "auth_login": "POST /auth/login",
+            "auth_me": "GET /auth/me",
+            "auth_demo_users": "GET /auth/demo-users",
             "optimize": "POST /optimize",
             "schedule": "GET /schedule",
             "blocks": "GET /blocks",
@@ -127,9 +206,13 @@ def get_root():
 
 
 @app.post("/optimize")
-def post_optimize(req: OptimizeRequest):
+def post_optimize(
+    req: OptimizeRequest,
+    current_user: dict = Depends(require_permission("optimize:run"))
+):
     """
     Triggers the CP-SAT optimization engine for the requested horizon.
+    Requires 'optimize:run' permission (Section Controller / DOM).
     """
     if req.horizon.lower() not in ("daily", "weekly", "monthly"):
         raise HTTPException(status_code=400, detail="Invalid horizon. Must be 'daily', 'weekly', or 'monthly'.")
@@ -310,6 +393,62 @@ def get_tasks(
     }
 
 
+@app.post("/tasks")
+def create_task(
+    req: CreateTaskRequest,
+    current_user: dict = Depends(require_permission("task:create"))
+):
+    """
+    Submits a maintenance block request into the backlog.
+    Enforces departmental boundaries:
+    - P-Way Engineers can only request Civil/Track maintenance (DEP001)
+    - OHE Engineers can only request Electrical/Traction maintenance (DEP002)
+    - Controllers can request any department maintenance
+    """
+    user_role = current_user.get("role")
+    if user_role == RailwayRoles.PWAY_ENGINEER and req.department_id != "DEP001":
+        raise HTTPException(
+            status_code=403,
+            detail="P-Way Engineers are restricted to Civil/Track (DEP001) maintenance requests only."
+        )
+    if user_role == RailwayRoles.OHE_ENGINEER and req.department_id != "DEP002":
+        raise HTTPException(
+            status_code=403,
+            detail="OHE Engineers are restricted to Electrical/Traction (DEP002) maintenance requests only."
+        )
+
+    tasks = state.active_dataset.get("maintenance_tasks", [])
+    new_id = f"MT{len(tasks) + 1:03d}"
+    
+    crew_role = "TRK_INSPECTION"
+    if req.department_id == "DEP002":
+        crew_role = "OHE_LINE"
+    elif req.department_id == "DEP003":
+        crew_role = "SIG_CIRCUIT"
+
+    new_task = {
+        "task_id": new_id,
+        "asset_id": req.asset_id,
+        "task_type": req.task_type,
+        "department_id": req.department_id,
+        "duration_minutes": req.duration_minutes,
+        "priority": req.priority,
+        "deadline_hours": req.deadline_hours,
+        "required_crew_role": crew_role,
+        "status": "Pending Allocation",
+        "submitted_by": f"{current_user.get('full_name')} ({current_user.get('badge_id')})",
+        "submission_time": datetime.utcnow().isoformat()
+    }
+    tasks.append(new_task)
+    
+    return {
+        "status": "Success",
+        "message": f"Maintenance block request {new_id} queued for Section Controller review.",
+        "task": new_task,
+        "total_tasks": len(tasks)
+    }
+
+
 @app.get("/conflicts")
 def get_conflicts(
     section_id: Optional[str] = Query(None, description="Filter by section ID"),
@@ -373,10 +512,14 @@ def get_scenarios():
 
 
 @app.post("/scenario")
-def post_scenario(req: ScenarioRequest):
+def post_scenario(
+    req: ScenarioRequest,
+    current_user: dict = Depends(require_permission("scenario:run"))
+):
     """
     Runs a What-If scenario (A, B, C, D, E) and returns the impact analysis differential
     against Baseline (Scenario A).
+    Requires 'scenario:run' permission (Section Controller / DOM).
     """
     scen_id = req.scenario_id.upper()
     if scen_id not in ("A", "B", "C", "D", "E"):
