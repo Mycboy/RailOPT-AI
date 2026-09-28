@@ -1,0 +1,134 @@
+[
+  {
+    "asset_id": "AST001",
+    "asset_code": "TRK-SEC001-01",
+    "asset_type": "Track",
+    "department_id": "DEP001",
+    "section_id": "SEC001",
+    "location_km": 8.5,
+    "criticality": "High",
+    "condition_score": 72,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST002",
+    "asset_code": "TRK-SEC001-02",
+    "asset_type": "Track",
+    "department_id": "DEP001",
+    "section_id": "SEC001",
+    "location_km": 18.2,
+    "criticality": "Medium",
+    "condition_score": 84,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST003",
+    "asset_code": "OHE-SEC001-01",
+    "asset_type": "OHE",
+    "department_id": "DEP002",
+    "section_id": "SEC001",
+    "location_km": 12.4,
+    "criticality": "High",
+    "condition_score": 61,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST004",
+    "asset_code": "SIG-SEC001-01",
+    "asset_type": "Signal",
+    "department_id": "DEP003",
+    "section_id": "SEC001",
+    "location_km": 20.1,
+    "criticality": "High",
+    "condition_score": 68,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST005",
+    "asset_code": "TRK-SEC002-01",
+    "asset_type": "Track",
+    "department_id": "DEP001",
+    "section_id": "SEC002",
+    "location_km": 31.5,
+    "criticality": "Critical",
+    "condition_score": 42,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST006",
+    "asset_code": "OHE-SEC002-01",
+    "asset_type": "OHE",
+    "department_id": "DEP002",
+    "section_id": "SEC002",
+    "location_km": 40.2,
+    "criticality": "High",
+    "condition_score": 55,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST007",
+    "asset_code": "SIG-SEC002-01",
+    "asset_type": "Signal",
+    "department_id": "DEP003",
+    "section_id": "SEC002",
+    "location_km": 47.8,
+    "criticality": "Medium",
+    "condition_score": 79,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST008",
+    "asset_code": "TRK-SEC003-01",
+    "asset_type": "Track",
+    "department_id": "DEP001",
+    "section_id": "SEC003",
+    "location_km": 59.3,
+    "criticality": "High",
+    "condition_score": 64,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST009",
+    "asset_code": "OHE-SEC003-01",
+    "asset_type": "OHE",
+    "department_id": "DEP002",
+    "section_id": "SEC003",
+    "location_km": 66.7,
+    "criticality": "Medium",
+    "condition_score": 81,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST010",
+    "asset_code": "SIG-SEC003-01",
+    "asset_type": "Signal",
+    "department_id": "DEP003",
+    "section_id": "SEC003",
+    "location_km": 73.4,
+    "criticality": "High",
+    "condition_score": 58,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST011",
+    "asset_code": "TRK-SEC004-01",
+    "asset_type": "Track",
+    "department_id": "DEP001",
+    "section_id": "SEC004",
+    "location_km": 86.2,
+    "criticality": "Medium",
+    "condition_score": 77,
+    "status": "Operational"
+  },
+  {
+    "asset_id": "AST012",
+    "asset_code": "OHE-SEC004-01",
+    "asset_type": "OHE",
+    "department_id": "DEP002",
+    "section_id": "SEC004",
+    "location_km": 96.5,
+    "criticality": "High",
+    "condition_score": 63,
+    "status": "Operational"
+  }
+]

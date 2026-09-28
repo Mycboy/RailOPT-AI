@@ -1,0 +1,17 @@
+[
+  {
+    "department_id": "DEP001",
+    "name": "Engineering",
+    "code": "ENG"
+  },
+  {
+    "department_id": "DEP002",
+    "name": "Traction",
+    "code": "TRD"
+  },
+  {
+    "department_id": "DEP003",
+    "name": "Signalling and Telecom",
+    "code": "SNT"
+  }
+]

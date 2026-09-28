@@ -1,0 +1,1982 @@
+[
+  {
+    "block_id": "BLK0001",
+    "section_id": "SEC001",
+    "start_time": "2026-09-28T01:30:00",
+    "end_time": "2026-09-28T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0002",
+    "section_id": "SEC001",
+    "start_time": "2026-09-28T11:30:00",
+    "end_time": "2026-09-28T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0003",
+    "section_id": "SEC001",
+    "start_time": "2026-09-28T15:00:00",
+    "end_time": "2026-09-28T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0004",
+    "section_id": "SEC002",
+    "start_time": "2026-09-28T01:45:00",
+    "end_time": "2026-09-28T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0005",
+    "section_id": "SEC003",
+    "start_time": "2026-09-28T02:00:00",
+    "end_time": "2026-09-28T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0006",
+    "section_id": "SEC003",
+    "start_time": "2026-09-28T12:10:00",
+    "end_time": "2026-09-28T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0007",
+    "section_id": "SEC004",
+    "start_time": "2026-09-28T02:15:00",
+    "end_time": "2026-09-28T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0008",
+    "section_id": "SEC004",
+    "start_time": "2026-09-28T15:45:00",
+    "end_time": "2026-09-28T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0009",
+    "section_id": "SEC001",
+    "start_time": "2026-09-29T01:30:00",
+    "end_time": "2026-09-29T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0010",
+    "section_id": "SEC002",
+    "start_time": "2026-09-29T01:45:00",
+    "end_time": "2026-09-29T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0011",
+    "section_id": "SEC002",
+    "start_time": "2026-09-29T11:50:00",
+    "end_time": "2026-09-29T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0012",
+    "section_id": "SEC003",
+    "start_time": "2026-09-29T02:00:00",
+    "end_time": "2026-09-29T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0013",
+    "section_id": "SEC003",
+    "start_time": "2026-09-29T15:30:00",
+    "end_time": "2026-09-29T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0014",
+    "section_id": "SEC004",
+    "start_time": "2026-09-29T02:15:00",
+    "end_time": "2026-09-29T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0015",
+    "section_id": "SEC004",
+    "start_time": "2026-09-29T12:30:00",
+    "end_time": "2026-09-29T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0016",
+    "section_id": "SEC001",
+    "start_time": "2026-09-30T01:30:00",
+    "end_time": "2026-09-30T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0017",
+    "section_id": "SEC001",
+    "start_time": "2026-09-30T11:30:00",
+    "end_time": "2026-09-30T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0018",
+    "section_id": "SEC002",
+    "start_time": "2026-09-30T01:45:00",
+    "end_time": "2026-09-30T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0019",
+    "section_id": "SEC002",
+    "start_time": "2026-09-30T15:15:00",
+    "end_time": "2026-09-30T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0020",
+    "section_id": "SEC003",
+    "start_time": "2026-09-30T02:00:00",
+    "end_time": "2026-09-30T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0021",
+    "section_id": "SEC003",
+    "start_time": "2026-09-30T12:10:00",
+    "end_time": "2026-09-30T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0022",
+    "section_id": "SEC004",
+    "start_time": "2026-09-30T02:15:00",
+    "end_time": "2026-09-30T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0023",
+    "section_id": "SEC001",
+    "start_time": "2026-10-01T01:30:00",
+    "end_time": "2026-10-01T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0024",
+    "section_id": "SEC001",
+    "start_time": "2026-10-01T15:00:00",
+    "end_time": "2026-10-01T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0025",
+    "section_id": "SEC002",
+    "start_time": "2026-10-01T01:45:00",
+    "end_time": "2026-10-01T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0026",
+    "section_id": "SEC002",
+    "start_time": "2026-10-01T11:50:00",
+    "end_time": "2026-10-01T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0027",
+    "section_id": "SEC003",
+    "start_time": "2026-10-01T02:00:00",
+    "end_time": "2026-10-01T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0028",
+    "section_id": "SEC004",
+    "start_time": "2026-10-01T02:15:00",
+    "end_time": "2026-10-01T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0029",
+    "section_id": "SEC004",
+    "start_time": "2026-10-01T12:30:00",
+    "end_time": "2026-10-01T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0030",
+    "section_id": "SEC004",
+    "start_time": "2026-10-01T15:45:00",
+    "end_time": "2026-10-01T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0031",
+    "section_id": "SEC001",
+    "start_time": "2026-10-02T01:30:00",
+    "end_time": "2026-10-02T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0032",
+    "section_id": "SEC001",
+    "start_time": "2026-10-02T11:30:00",
+    "end_time": "2026-10-02T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0033",
+    "section_id": "SEC002",
+    "start_time": "2026-10-02T01:45:00",
+    "end_time": "2026-10-02T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0034",
+    "section_id": "SEC003",
+    "start_time": "2026-10-02T02:00:00",
+    "end_time": "2026-10-02T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0035",
+    "section_id": "SEC003",
+    "start_time": "2026-10-02T12:10:00",
+    "end_time": "2026-10-02T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0036",
+    "section_id": "SEC003",
+    "start_time": "2026-10-02T15:30:00",
+    "end_time": "2026-10-02T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0037",
+    "section_id": "SEC004",
+    "start_time": "2026-10-02T02:15:00",
+    "end_time": "2026-10-02T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0038",
+    "section_id": "SEC001",
+    "start_time": "2026-10-03T01:30:00",
+    "end_time": "2026-10-03T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0039",
+    "section_id": "SEC002",
+    "start_time": "2026-10-03T01:45:00",
+    "end_time": "2026-10-03T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0040",
+    "section_id": "SEC002",
+    "start_time": "2026-10-03T11:50:00",
+    "end_time": "2026-10-03T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0041",
+    "section_id": "SEC002",
+    "start_time": "2026-10-03T15:15:00",
+    "end_time": "2026-10-03T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0042",
+    "section_id": "SEC003",
+    "start_time": "2026-10-03T02:00:00",
+    "end_time": "2026-10-03T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0043",
+    "section_id": "SEC004",
+    "start_time": "2026-10-03T02:15:00",
+    "end_time": "2026-10-03T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0044",
+    "section_id": "SEC004",
+    "start_time": "2026-10-03T12:30:00",
+    "end_time": "2026-10-03T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0045",
+    "section_id": "SEC001",
+    "start_time": "2026-10-04T01:30:00",
+    "end_time": "2026-10-04T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0046",
+    "section_id": "SEC001",
+    "start_time": "2026-10-04T11:30:00",
+    "end_time": "2026-10-04T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0047",
+    "section_id": "SEC001",
+    "start_time": "2026-10-04T15:00:00",
+    "end_time": "2026-10-04T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0048",
+    "section_id": "SEC002",
+    "start_time": "2026-10-04T01:45:00",
+    "end_time": "2026-10-04T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0049",
+    "section_id": "SEC003",
+    "start_time": "2026-10-04T02:00:00",
+    "end_time": "2026-10-04T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0050",
+    "section_id": "SEC003",
+    "start_time": "2026-10-04T12:10:00",
+    "end_time": "2026-10-04T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0051",
+    "section_id": "SEC004",
+    "start_time": "2026-10-04T02:15:00",
+    "end_time": "2026-10-04T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0052",
+    "section_id": "SEC004",
+    "start_time": "2026-10-04T15:45:00",
+    "end_time": "2026-10-04T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0053",
+    "section_id": "SEC001",
+    "start_time": "2026-10-05T01:30:00",
+    "end_time": "2026-10-05T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0054",
+    "section_id": "SEC002",
+    "start_time": "2026-10-05T01:45:00",
+    "end_time": "2026-10-05T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0055",
+    "section_id": "SEC002",
+    "start_time": "2026-10-05T11:50:00",
+    "end_time": "2026-10-05T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0056",
+    "section_id": "SEC003",
+    "start_time": "2026-10-05T02:00:00",
+    "end_time": "2026-10-05T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0057",
+    "section_id": "SEC003",
+    "start_time": "2026-10-05T15:30:00",
+    "end_time": "2026-10-05T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0058",
+    "section_id": "SEC004",
+    "start_time": "2026-10-05T02:15:00",
+    "end_time": "2026-10-05T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0059",
+    "section_id": "SEC004",
+    "start_time": "2026-10-05T12:30:00",
+    "end_time": "2026-10-05T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0060",
+    "section_id": "SEC001",
+    "start_time": "2026-10-06T01:30:00",
+    "end_time": "2026-10-06T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0061",
+    "section_id": "SEC001",
+    "start_time": "2026-10-06T11:30:00",
+    "end_time": "2026-10-06T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0062",
+    "section_id": "SEC002",
+    "start_time": "2026-10-06T01:45:00",
+    "end_time": "2026-10-06T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0063",
+    "section_id": "SEC002",
+    "start_time": "2026-10-06T15:15:00",
+    "end_time": "2026-10-06T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0064",
+    "section_id": "SEC003",
+    "start_time": "2026-10-06T02:00:00",
+    "end_time": "2026-10-06T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0065",
+    "section_id": "SEC003",
+    "start_time": "2026-10-06T12:10:00",
+    "end_time": "2026-10-06T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0066",
+    "section_id": "SEC004",
+    "start_time": "2026-10-06T02:15:00",
+    "end_time": "2026-10-06T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0067",
+    "section_id": "SEC001",
+    "start_time": "2026-10-07T01:30:00",
+    "end_time": "2026-10-07T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0068",
+    "section_id": "SEC001",
+    "start_time": "2026-10-07T15:00:00",
+    "end_time": "2026-10-07T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0069",
+    "section_id": "SEC002",
+    "start_time": "2026-10-07T01:45:00",
+    "end_time": "2026-10-07T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0070",
+    "section_id": "SEC002",
+    "start_time": "2026-10-07T11:50:00",
+    "end_time": "2026-10-07T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0071",
+    "section_id": "SEC003",
+    "start_time": "2026-10-07T02:00:00",
+    "end_time": "2026-10-07T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0072",
+    "section_id": "SEC004",
+    "start_time": "2026-10-07T02:15:00",
+    "end_time": "2026-10-07T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0073",
+    "section_id": "SEC004",
+    "start_time": "2026-10-07T12:30:00",
+    "end_time": "2026-10-07T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0074",
+    "section_id": "SEC004",
+    "start_time": "2026-10-07T15:45:00",
+    "end_time": "2026-10-07T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0075",
+    "section_id": "SEC001",
+    "start_time": "2026-10-08T01:30:00",
+    "end_time": "2026-10-08T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0076",
+    "section_id": "SEC001",
+    "start_time": "2026-10-08T11:30:00",
+    "end_time": "2026-10-08T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0077",
+    "section_id": "SEC002",
+    "start_time": "2026-10-08T01:45:00",
+    "end_time": "2026-10-08T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0078",
+    "section_id": "SEC003",
+    "start_time": "2026-10-08T02:00:00",
+    "end_time": "2026-10-08T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0079",
+    "section_id": "SEC003",
+    "start_time": "2026-10-08T12:10:00",
+    "end_time": "2026-10-08T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0080",
+    "section_id": "SEC003",
+    "start_time": "2026-10-08T15:30:00",
+    "end_time": "2026-10-08T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0081",
+    "section_id": "SEC004",
+    "start_time": "2026-10-08T02:15:00",
+    "end_time": "2026-10-08T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0082",
+    "section_id": "SEC001",
+    "start_time": "2026-10-09T01:30:00",
+    "end_time": "2026-10-09T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0083",
+    "section_id": "SEC002",
+    "start_time": "2026-10-09T01:45:00",
+    "end_time": "2026-10-09T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0084",
+    "section_id": "SEC002",
+    "start_time": "2026-10-09T11:50:00",
+    "end_time": "2026-10-09T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0085",
+    "section_id": "SEC002",
+    "start_time": "2026-10-09T15:15:00",
+    "end_time": "2026-10-09T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0086",
+    "section_id": "SEC003",
+    "start_time": "2026-10-09T02:00:00",
+    "end_time": "2026-10-09T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0087",
+    "section_id": "SEC004",
+    "start_time": "2026-10-09T02:15:00",
+    "end_time": "2026-10-09T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0088",
+    "section_id": "SEC004",
+    "start_time": "2026-10-09T12:30:00",
+    "end_time": "2026-10-09T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0089",
+    "section_id": "SEC001",
+    "start_time": "2026-10-10T01:30:00",
+    "end_time": "2026-10-10T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0090",
+    "section_id": "SEC001",
+    "start_time": "2026-10-10T11:30:00",
+    "end_time": "2026-10-10T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0091",
+    "section_id": "SEC001",
+    "start_time": "2026-10-10T15:00:00",
+    "end_time": "2026-10-10T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0092",
+    "section_id": "SEC002",
+    "start_time": "2026-10-10T01:45:00",
+    "end_time": "2026-10-10T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0093",
+    "section_id": "SEC003",
+    "start_time": "2026-10-10T02:00:00",
+    "end_time": "2026-10-10T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0094",
+    "section_id": "SEC003",
+    "start_time": "2026-10-10T12:10:00",
+    "end_time": "2026-10-10T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0095",
+    "section_id": "SEC004",
+    "start_time": "2026-10-10T02:15:00",
+    "end_time": "2026-10-10T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0096",
+    "section_id": "SEC004",
+    "start_time": "2026-10-10T15:45:00",
+    "end_time": "2026-10-10T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0097",
+    "section_id": "SEC001",
+    "start_time": "2026-10-11T01:30:00",
+    "end_time": "2026-10-11T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0098",
+    "section_id": "SEC002",
+    "start_time": "2026-10-11T01:45:00",
+    "end_time": "2026-10-11T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0099",
+    "section_id": "SEC002",
+    "start_time": "2026-10-11T11:50:00",
+    "end_time": "2026-10-11T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0100",
+    "section_id": "SEC003",
+    "start_time": "2026-10-11T02:00:00",
+    "end_time": "2026-10-11T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0101",
+    "section_id": "SEC003",
+    "start_time": "2026-10-11T15:30:00",
+    "end_time": "2026-10-11T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0102",
+    "section_id": "SEC004",
+    "start_time": "2026-10-11T02:15:00",
+    "end_time": "2026-10-11T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0103",
+    "section_id": "SEC004",
+    "start_time": "2026-10-11T12:30:00",
+    "end_time": "2026-10-11T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0104",
+    "section_id": "SEC001",
+    "start_time": "2026-10-12T01:30:00",
+    "end_time": "2026-10-12T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0105",
+    "section_id": "SEC001",
+    "start_time": "2026-10-12T11:30:00",
+    "end_time": "2026-10-12T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0106",
+    "section_id": "SEC002",
+    "start_time": "2026-10-12T01:45:00",
+    "end_time": "2026-10-12T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0107",
+    "section_id": "SEC002",
+    "start_time": "2026-10-12T15:15:00",
+    "end_time": "2026-10-12T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0108",
+    "section_id": "SEC003",
+    "start_time": "2026-10-12T02:00:00",
+    "end_time": "2026-10-12T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0109",
+    "section_id": "SEC003",
+    "start_time": "2026-10-12T12:10:00",
+    "end_time": "2026-10-12T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0110",
+    "section_id": "SEC004",
+    "start_time": "2026-10-12T02:15:00",
+    "end_time": "2026-10-12T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0111",
+    "section_id": "SEC001",
+    "start_time": "2026-10-13T01:30:00",
+    "end_time": "2026-10-13T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0112",
+    "section_id": "SEC001",
+    "start_time": "2026-10-13T15:00:00",
+    "end_time": "2026-10-13T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0113",
+    "section_id": "SEC002",
+    "start_time": "2026-10-13T01:45:00",
+    "end_time": "2026-10-13T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0114",
+    "section_id": "SEC002",
+    "start_time": "2026-10-13T11:50:00",
+    "end_time": "2026-10-13T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0115",
+    "section_id": "SEC003",
+    "start_time": "2026-10-13T02:00:00",
+    "end_time": "2026-10-13T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0116",
+    "section_id": "SEC004",
+    "start_time": "2026-10-13T02:15:00",
+    "end_time": "2026-10-13T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0117",
+    "section_id": "SEC004",
+    "start_time": "2026-10-13T12:30:00",
+    "end_time": "2026-10-13T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0118",
+    "section_id": "SEC004",
+    "start_time": "2026-10-13T15:45:00",
+    "end_time": "2026-10-13T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0119",
+    "section_id": "SEC001",
+    "start_time": "2026-10-14T01:30:00",
+    "end_time": "2026-10-14T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0120",
+    "section_id": "SEC001",
+    "start_time": "2026-10-14T11:30:00",
+    "end_time": "2026-10-14T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0121",
+    "section_id": "SEC002",
+    "start_time": "2026-10-14T01:45:00",
+    "end_time": "2026-10-14T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0122",
+    "section_id": "SEC003",
+    "start_time": "2026-10-14T02:00:00",
+    "end_time": "2026-10-14T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0123",
+    "section_id": "SEC003",
+    "start_time": "2026-10-14T12:10:00",
+    "end_time": "2026-10-14T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0124",
+    "section_id": "SEC003",
+    "start_time": "2026-10-14T15:30:00",
+    "end_time": "2026-10-14T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0125",
+    "section_id": "SEC004",
+    "start_time": "2026-10-14T02:15:00",
+    "end_time": "2026-10-14T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0126",
+    "section_id": "SEC001",
+    "start_time": "2026-10-15T01:30:00",
+    "end_time": "2026-10-15T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0127",
+    "section_id": "SEC002",
+    "start_time": "2026-10-15T01:45:00",
+    "end_time": "2026-10-15T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0128",
+    "section_id": "SEC002",
+    "start_time": "2026-10-15T11:50:00",
+    "end_time": "2026-10-15T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0129",
+    "section_id": "SEC002",
+    "start_time": "2026-10-15T15:15:00",
+    "end_time": "2026-10-15T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0130",
+    "section_id": "SEC003",
+    "start_time": "2026-10-15T02:00:00",
+    "end_time": "2026-10-15T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0131",
+    "section_id": "SEC004",
+    "start_time": "2026-10-15T02:15:00",
+    "end_time": "2026-10-15T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0132",
+    "section_id": "SEC004",
+    "start_time": "2026-10-15T12:30:00",
+    "end_time": "2026-10-15T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0133",
+    "section_id": "SEC001",
+    "start_time": "2026-10-16T01:30:00",
+    "end_time": "2026-10-16T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0134",
+    "section_id": "SEC001",
+    "start_time": "2026-10-16T11:30:00",
+    "end_time": "2026-10-16T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0135",
+    "section_id": "SEC001",
+    "start_time": "2026-10-16T15:00:00",
+    "end_time": "2026-10-16T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0136",
+    "section_id": "SEC002",
+    "start_time": "2026-10-16T01:45:00",
+    "end_time": "2026-10-16T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0137",
+    "section_id": "SEC003",
+    "start_time": "2026-10-16T02:00:00",
+    "end_time": "2026-10-16T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0138",
+    "section_id": "SEC003",
+    "start_time": "2026-10-16T12:10:00",
+    "end_time": "2026-10-16T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0139",
+    "section_id": "SEC004",
+    "start_time": "2026-10-16T02:15:00",
+    "end_time": "2026-10-16T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0140",
+    "section_id": "SEC004",
+    "start_time": "2026-10-16T15:45:00",
+    "end_time": "2026-10-16T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0141",
+    "section_id": "SEC001",
+    "start_time": "2026-10-17T01:30:00",
+    "end_time": "2026-10-17T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0142",
+    "section_id": "SEC002",
+    "start_time": "2026-10-17T01:45:00",
+    "end_time": "2026-10-17T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0143",
+    "section_id": "SEC002",
+    "start_time": "2026-10-17T11:50:00",
+    "end_time": "2026-10-17T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0144",
+    "section_id": "SEC003",
+    "start_time": "2026-10-17T02:00:00",
+    "end_time": "2026-10-17T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0145",
+    "section_id": "SEC003",
+    "start_time": "2026-10-17T15:30:00",
+    "end_time": "2026-10-17T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0146",
+    "section_id": "SEC004",
+    "start_time": "2026-10-17T02:15:00",
+    "end_time": "2026-10-17T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0147",
+    "section_id": "SEC004",
+    "start_time": "2026-10-17T12:30:00",
+    "end_time": "2026-10-17T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0148",
+    "section_id": "SEC001",
+    "start_time": "2026-10-18T01:30:00",
+    "end_time": "2026-10-18T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0149",
+    "section_id": "SEC001",
+    "start_time": "2026-10-18T11:30:00",
+    "end_time": "2026-10-18T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0150",
+    "section_id": "SEC002",
+    "start_time": "2026-10-18T01:45:00",
+    "end_time": "2026-10-18T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0151",
+    "section_id": "SEC002",
+    "start_time": "2026-10-18T15:15:00",
+    "end_time": "2026-10-18T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0152",
+    "section_id": "SEC003",
+    "start_time": "2026-10-18T02:00:00",
+    "end_time": "2026-10-18T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0153",
+    "section_id": "SEC003",
+    "start_time": "2026-10-18T12:10:00",
+    "end_time": "2026-10-18T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0154",
+    "section_id": "SEC004",
+    "start_time": "2026-10-18T02:15:00",
+    "end_time": "2026-10-18T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0155",
+    "section_id": "SEC001",
+    "start_time": "2026-10-19T01:30:00",
+    "end_time": "2026-10-19T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0156",
+    "section_id": "SEC001",
+    "start_time": "2026-10-19T15:00:00",
+    "end_time": "2026-10-19T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0157",
+    "section_id": "SEC002",
+    "start_time": "2026-10-19T01:45:00",
+    "end_time": "2026-10-19T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0158",
+    "section_id": "SEC002",
+    "start_time": "2026-10-19T11:50:00",
+    "end_time": "2026-10-19T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0159",
+    "section_id": "SEC003",
+    "start_time": "2026-10-19T02:00:00",
+    "end_time": "2026-10-19T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0160",
+    "section_id": "SEC004",
+    "start_time": "2026-10-19T02:15:00",
+    "end_time": "2026-10-19T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0161",
+    "section_id": "SEC004",
+    "start_time": "2026-10-19T12:30:00",
+    "end_time": "2026-10-19T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0162",
+    "section_id": "SEC004",
+    "start_time": "2026-10-19T15:45:00",
+    "end_time": "2026-10-19T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0163",
+    "section_id": "SEC001",
+    "start_time": "2026-10-20T01:30:00",
+    "end_time": "2026-10-20T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0164",
+    "section_id": "SEC001",
+    "start_time": "2026-10-20T11:30:00",
+    "end_time": "2026-10-20T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0165",
+    "section_id": "SEC002",
+    "start_time": "2026-10-20T01:45:00",
+    "end_time": "2026-10-20T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0166",
+    "section_id": "SEC003",
+    "start_time": "2026-10-20T02:00:00",
+    "end_time": "2026-10-20T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0167",
+    "section_id": "SEC003",
+    "start_time": "2026-10-20T12:10:00",
+    "end_time": "2026-10-20T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0168",
+    "section_id": "SEC003",
+    "start_time": "2026-10-20T15:30:00",
+    "end_time": "2026-10-20T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0169",
+    "section_id": "SEC004",
+    "start_time": "2026-10-20T02:15:00",
+    "end_time": "2026-10-20T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0170",
+    "section_id": "SEC001",
+    "start_time": "2026-10-21T01:30:00",
+    "end_time": "2026-10-21T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0171",
+    "section_id": "SEC002",
+    "start_time": "2026-10-21T01:45:00",
+    "end_time": "2026-10-21T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0172",
+    "section_id": "SEC002",
+    "start_time": "2026-10-21T11:50:00",
+    "end_time": "2026-10-21T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0173",
+    "section_id": "SEC002",
+    "start_time": "2026-10-21T15:15:00",
+    "end_time": "2026-10-21T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0174",
+    "section_id": "SEC003",
+    "start_time": "2026-10-21T02:00:00",
+    "end_time": "2026-10-21T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0175",
+    "section_id": "SEC004",
+    "start_time": "2026-10-21T02:15:00",
+    "end_time": "2026-10-21T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0176",
+    "section_id": "SEC004",
+    "start_time": "2026-10-21T12:30:00",
+    "end_time": "2026-10-21T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0177",
+    "section_id": "SEC001",
+    "start_time": "2026-10-22T01:30:00",
+    "end_time": "2026-10-22T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0178",
+    "section_id": "SEC001",
+    "start_time": "2026-10-22T11:30:00",
+    "end_time": "2026-10-22T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0179",
+    "section_id": "SEC001",
+    "start_time": "2026-10-22T15:00:00",
+    "end_time": "2026-10-22T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0180",
+    "section_id": "SEC002",
+    "start_time": "2026-10-22T01:45:00",
+    "end_time": "2026-10-22T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0181",
+    "section_id": "SEC003",
+    "start_time": "2026-10-22T02:00:00",
+    "end_time": "2026-10-22T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0182",
+    "section_id": "SEC003",
+    "start_time": "2026-10-22T12:10:00",
+    "end_time": "2026-10-22T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0183",
+    "section_id": "SEC004",
+    "start_time": "2026-10-22T02:15:00",
+    "end_time": "2026-10-22T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0184",
+    "section_id": "SEC004",
+    "start_time": "2026-10-22T15:45:00",
+    "end_time": "2026-10-22T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0185",
+    "section_id": "SEC001",
+    "start_time": "2026-10-23T01:30:00",
+    "end_time": "2026-10-23T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0186",
+    "section_id": "SEC002",
+    "start_time": "2026-10-23T01:45:00",
+    "end_time": "2026-10-23T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0187",
+    "section_id": "SEC002",
+    "start_time": "2026-10-23T11:50:00",
+    "end_time": "2026-10-23T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0188",
+    "section_id": "SEC003",
+    "start_time": "2026-10-23T02:00:00",
+    "end_time": "2026-10-23T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0189",
+    "section_id": "SEC003",
+    "start_time": "2026-10-23T15:30:00",
+    "end_time": "2026-10-23T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0190",
+    "section_id": "SEC004",
+    "start_time": "2026-10-23T02:15:00",
+    "end_time": "2026-10-23T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0191",
+    "section_id": "SEC004",
+    "start_time": "2026-10-23T12:30:00",
+    "end_time": "2026-10-23T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0192",
+    "section_id": "SEC001",
+    "start_time": "2026-10-24T01:30:00",
+    "end_time": "2026-10-24T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0193",
+    "section_id": "SEC001",
+    "start_time": "2026-10-24T11:30:00",
+    "end_time": "2026-10-24T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0194",
+    "section_id": "SEC002",
+    "start_time": "2026-10-24T01:45:00",
+    "end_time": "2026-10-24T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0195",
+    "section_id": "SEC002",
+    "start_time": "2026-10-24T15:15:00",
+    "end_time": "2026-10-24T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0196",
+    "section_id": "SEC003",
+    "start_time": "2026-10-24T02:00:00",
+    "end_time": "2026-10-24T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0197",
+    "section_id": "SEC003",
+    "start_time": "2026-10-24T12:10:00",
+    "end_time": "2026-10-24T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0198",
+    "section_id": "SEC004",
+    "start_time": "2026-10-24T02:15:00",
+    "end_time": "2026-10-24T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0199",
+    "section_id": "SEC001",
+    "start_time": "2026-10-25T01:30:00",
+    "end_time": "2026-10-25T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0200",
+    "section_id": "SEC001",
+    "start_time": "2026-10-25T15:00:00",
+    "end_time": "2026-10-25T16:30:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0201",
+    "section_id": "SEC002",
+    "start_time": "2026-10-25T01:45:00",
+    "end_time": "2026-10-25T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0202",
+    "section_id": "SEC002",
+    "start_time": "2026-10-25T11:50:00",
+    "end_time": "2026-10-25T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0203",
+    "section_id": "SEC003",
+    "start_time": "2026-10-25T02:00:00",
+    "end_time": "2026-10-25T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0204",
+    "section_id": "SEC004",
+    "start_time": "2026-10-25T02:15:00",
+    "end_time": "2026-10-25T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0205",
+    "section_id": "SEC004",
+    "start_time": "2026-10-25T12:30:00",
+    "end_time": "2026-10-25T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0206",
+    "section_id": "SEC004",
+    "start_time": "2026-10-25T15:45:00",
+    "end_time": "2026-10-25T17:15:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0207",
+    "section_id": "SEC001",
+    "start_time": "2026-10-26T01:30:00",
+    "end_time": "2026-10-26T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0208",
+    "section_id": "SEC001",
+    "start_time": "2026-10-26T11:30:00",
+    "end_time": "2026-10-26T13:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0209",
+    "section_id": "SEC002",
+    "start_time": "2026-10-26T01:45:00",
+    "end_time": "2026-10-26T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0210",
+    "section_id": "SEC003",
+    "start_time": "2026-10-26T02:00:00",
+    "end_time": "2026-10-26T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0211",
+    "section_id": "SEC003",
+    "start_time": "2026-10-26T12:10:00",
+    "end_time": "2026-10-26T13:50:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0212",
+    "section_id": "SEC003",
+    "start_time": "2026-10-26T15:30:00",
+    "end_time": "2026-10-26T17:00:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0213",
+    "section_id": "SEC004",
+    "start_time": "2026-10-26T02:15:00",
+    "end_time": "2026-10-26T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0214",
+    "section_id": "SEC001",
+    "start_time": "2026-10-27T01:30:00",
+    "end_time": "2026-10-27T04:00:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0215",
+    "section_id": "SEC002",
+    "start_time": "2026-10-27T01:45:00",
+    "end_time": "2026-10-27T04:15:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0216",
+    "section_id": "SEC002",
+    "start_time": "2026-10-27T11:50:00",
+    "end_time": "2026-10-27T13:30:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  },
+  {
+    "block_id": "BLK0217",
+    "section_id": "SEC002",
+    "start_time": "2026-10-27T15:15:00",
+    "end_time": "2026-10-27T16:45:00",
+    "duration_minutes": 90,
+    "status": "Available",
+    "window_type": "Afternoon Off-Peak"
+  },
+  {
+    "block_id": "BLK0218",
+    "section_id": "SEC003",
+    "start_time": "2026-10-27T02:00:00",
+    "end_time": "2026-10-27T04:30:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0219",
+    "section_id": "SEC004",
+    "start_time": "2026-10-27T02:15:00",
+    "end_time": "2026-10-27T04:45:00",
+    "duration_minutes": 150,
+    "status": "Available",
+    "window_type": "Night Corridor (White Window)"
+  },
+  {
+    "block_id": "BLK0220",
+    "section_id": "SEC004",
+    "start_time": "2026-10-27T12:30:00",
+    "end_time": "2026-10-27T14:10:00",
+    "duration_minutes": 100,
+    "status": "Available",
+    "window_type": "Midday Shadow Window"
+  }
+]

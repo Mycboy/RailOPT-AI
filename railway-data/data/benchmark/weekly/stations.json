@@ -1,0 +1,32 @@
+[
+  {
+    "station_id": "ST001",
+    "name": "Shakti Nagar",
+    "code": "SHN",
+    "km_from_origin": 0
+  },
+  {
+    "station_id": "ST002",
+    "name": "Vijaypur",
+    "code": "VJP",
+    "km_from_origin": 25
+  },
+  {
+    "station_id": "ST003",
+    "name": "Rajgarh",
+    "code": "RGR",
+    "km_from_origin": 52
+  },
+  {
+    "station_id": "ST004",
+    "name": "Lakshmi Nagar",
+    "code": "LKN",
+    "km_from_origin": 78
+  },
+  {
+    "station_id": "ST005",
+    "name": "Devgarh",
+    "code": "DVG",
+    "km_from_origin": 105
+  }
+]
