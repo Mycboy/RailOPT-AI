@@ -1,0 +1,58 @@
+[
+  {
+    "train_id": "TR001",
+    "train_number": "12001",
+    "train_name": "Northern Express",
+    "train_type": "Express",
+    "priority": "High"
+  },
+  {
+    "train_id": "TR002",
+    "train_number": "12401",
+    "train_name": "Capital Express",
+    "train_type": "Express",
+    "priority": "High"
+  },
+  {
+    "train_id": "TR003",
+    "train_number": "12901",
+    "train_name": "Western Express",
+    "train_type": "Express",
+    "priority": "High"
+  },
+  {
+    "train_id": "TR004",
+    "train_number": "14011",
+    "train_name": "Intercity Passenger",
+    "train_type": "Passenger",
+    "priority": "Medium"
+  },
+  {
+    "train_id": "TR005",
+    "train_number": "15021",
+    "train_name": "Regional Express",
+    "train_type": "Express",
+    "priority": "Medium"
+  },
+  {
+    "train_id": "TR006",
+    "train_number": "22451",
+    "train_name": "Superfast Express",
+    "train_type": "Superfast",
+    "priority": "High"
+  },
+  {
+    "train_id": "TR007",
+    "train_number": "54001",
+    "train_name": "Local Passenger",
+    "train_type": "Passenger",
+    "priority": "Low"
+  },
+  {
+    "train_id": "TR008",
+    "train_number": "19011",
+    "train_name": "Regional Passenger",
+    "train_type": "Passenger",
+    "priority": "Low"
+  }
+]

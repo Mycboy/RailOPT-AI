@@ -1,0 +1,42 @@
+[
+  {
+    "resource_id": "RES001",
+    "name": "Engineering Team 1",
+    "resource_type": "Maintenance Team",
+    "department_id": "DEP001",
+    "capacity": 1,
+    "status": "Available"
+  },
+  {
+    "resource_id": "RES002",
+    "name": "Engineering Team 2",
+    "resource_type": "Maintenance Team",
+    "department_id": "DEP001",
+    "capacity": 1,
+    "status": "Unavailable"
+  },
+  {
+    "resource_id": "RES003",
+    "name": "Traction Team 1",
+    "resource_type": "Maintenance Team",
+    "department_id": "DEP002",
+    "capacity": 1,
+    "status": "Unavailable"
+  },
+  {
+    "resource_id": "RES004",
+    "name": "S&T Team 1",
+    "resource_type": "Maintenance Team",
+    "department_id": "DEP003",
+    "capacity": 1,
+    "status": "Available"
+  },
+  {
+    "resource_id": "RES005",
+    "name": "Track Machine 1",
+    "resource_type": "Machine",
+    "department_id": "DEP001",
+    "capacity": 1,
+    "status": "Available"
+  }
+]

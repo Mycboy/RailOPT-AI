@@ -1,0 +1,38 @@
+[
+    {
+        "section_id": "SEC001",
+        "from_station": "ST001",
+        "to_station": "ST002",
+        "start_km": 0,
+        "end_km": 25,
+        "length_km": 25,
+        "traffic_level": "High"
+    },
+    {
+         "section_id": "SEC002",
+        "from_station": "ST002",
+        "to_station": "ST003",
+        "start_km": 25,
+        "end_km": 52,
+        "length_km": 27,
+        "traffic_level": "High"
+    },
+    {
+         "section_id": "SEC003",
+        "from_station": "ST003",
+        "to_station": "ST004",
+        "start_km": 52,
+        "end_km": 78,
+        "length_km": 26,
+        "traffic_level": "Medium"
+    },
+    {
+        "section_id": "SEC004",
+        "from_station": "ST004",
+        "to_station": "ST005",
+        "start_km": 78,
+        "end_km": 105,
+        "length_km": 27,
+        "traffic_level": "Medium"
+    }
+]

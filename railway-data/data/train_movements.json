@@ -1,0 +1,82 @@
+[
+  {
+    "movement_id": "MOV001",
+    "train_id": "TR001",
+    "section_id": "SEC001",
+    "entry_time": "2026-09-25T08:30:00",
+    "exit_time": "2026-09-25T09:00:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV002",
+    "train_id": "TR001",
+    "section_id": "SEC002",
+    "entry_time": "2026-09-25T09:02:00",
+    "exit_time": "2026-09-25T09:32:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV003",
+    "train_id": "TR001",
+    "section_id": "SEC003",
+    "entry_time": "2026-09-25T09:34:00",
+    "exit_time": "2026-09-25T10:04:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV004",
+    "train_id": "TR002",
+    "section_id": "SEC001",
+    "entry_time": "2026-09-25T09:45:00",
+    "exit_time": "2026-09-25T10:30:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV005",
+    "train_id": "TR003",
+    "section_id": "SEC002",
+    "entry_time": "2026-09-25T11:00:00",
+    "exit_time": "2026-09-25T11:30:00",
+    "direction": "DOWN"
+  },
+  {
+    "movement_id": "MOV006",
+    "train_id": "TR004",
+    "section_id": "SEC003",
+    "entry_time": "2026-09-25T12:00:00",
+    "exit_time": "2026-09-25T12:35:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV007",
+    "train_id": "TR005",
+    "section_id": "SEC004",
+    "entry_time": "2026-09-25T13:00:00",
+    "exit_time": "2026-09-25T13:35:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV008",
+    "train_id": "TR006",
+    "section_id": "SEC002",
+    "entry_time": "2026-09-25T14:00:00",
+    "exit_time": "2026-09-25T14:25:00",
+    "direction": "UP"
+  },
+  {
+    "movement_id": "MOV009",
+    "train_id": "TR007",
+    "section_id": "SEC003",
+    "entry_time": "2026-09-25T15:00:00",
+    "exit_time": "2026-09-25T15:40:00",
+    "direction": "DOWN"
+  },
+  {
+    "movement_id": "MOV010",
+    "train_id": "TR008",
+    "section_id": "SEC004",
+    "entry_time": "2026-09-25T16:00:00",
+    "exit_time": "2026-09-25T16:40:00",
+    "direction": "UP"
+  }
+]
