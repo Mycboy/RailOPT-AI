@@ -308,7 +308,7 @@
     "total_gross_value": 1123,
     "total_operations_cost": 153,
     "total_net_value": 970,
-    "objective_value": 990.0,
-    "solve_time_seconds": 0.01
+    "objective_value": 985.0,
+    "solve_time_seconds": 0.03
   }
 }
