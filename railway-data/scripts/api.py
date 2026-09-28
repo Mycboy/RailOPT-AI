@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 from optimizer import RailwayOptimizer, optimize_schedule
 from dataset_manager import RailwayDatasetManager
 from scenario_engine import ScenarioEngine
+from benchmark_engine import BenchmarkEngine
 from candidate_scorer import parse_datetime
 from railway_operations_cost import calculate_operations_cost
 
@@ -416,6 +417,18 @@ def get_kpi():
         "horizon": state.active_horizon,
         "kpis": summary
     }
+
+
+@app.get("/benchmark")
+def get_benchmark(horizon: Optional[str] = Query(None, description="Horizon: daily, weekly, monthly")):
+    """
+    Executes the controlled synthetic scenario comparing the Before (Manual/Uncoordinated)
+    plan against the After (CP-SAT Optimized) plan with quantifiable measurable KPIs.
+    """
+    h = horizon.lower() if horizon else state.active_horizon
+    engine = BenchmarkEngine(horizon=h)
+    results = engine.run_benchmark()
+    return results
 
 
 if __name__ == "__main__":

@@ -96,6 +96,12 @@ export const apiService = {
     return response.data;
   },
 
+  // Get Benchmark Comparison (Before vs After)
+  getBenchmark: async (horizon = 'weekly') => {
+    const response = await client.get(`/benchmark?horizon=${horizon}`);
+    return response.data;
+  },
+
   // Get Resources / Crews
   getResources: async () => {
     const response = await client.get('/resources');

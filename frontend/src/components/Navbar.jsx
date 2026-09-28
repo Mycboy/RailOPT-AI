@@ -7,7 +7,8 @@ import {
   Radio, 
   Sparkles,
   CheckCircle2,
-  AlertTriangle
+  AlertTriangle,
+  Award
 } from 'lucide-react';
 
 export default function Navbar({
@@ -48,6 +49,7 @@ export default function Navbar({
           {/* Navigation Tabs */}
           <nav className="hidden md:flex items-center space-x-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
             {[
+              { id: 'benchmark', label: 'Before vs After', icon: Award },
               { id: 'plan', label: 'Maintenance Plan', icon: Calendar },
               { id: 'map', label: 'Network GIS Map', icon: TrainTrack },
               { id: 'assets', label: 'Asset View', icon: Layers },
@@ -116,6 +118,7 @@ export default function Navbar({
       {/* Mobile Tab Bar */}
       <div className="md:hidden flex items-center justify-around border-t border-slate-800/80 bg-slate-950/95 py-2 px-2">
         {[
+          { id: 'benchmark', label: 'Before/After', icon: Award },
           { id: 'plan', label: 'Plan', icon: Calendar },
           { id: 'map', label: 'GIS Map', icon: TrainTrack },
           { id: 'assets', label: 'Assets', icon: Layers },

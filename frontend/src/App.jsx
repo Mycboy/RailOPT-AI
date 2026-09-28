@@ -7,6 +7,7 @@ import AssetView from './components/AssetView';
 import ConflictView from './components/ConflictView';
 import ScenarioSandbox from './components/ScenarioSandbox';
 import AnalyticsView from './components/AnalyticsView';
+import BenchmarkView from './components/BenchmarkView';
 import { apiService } from './services/api';
 import { 
   Sparkles, 
@@ -15,12 +16,13 @@ import {
   Calendar, 
   Layers, 
   AlertTriangle, 
-  TrainTrack 
+  TrainTrack,
+  Award
 } from 'lucide-react';
 
 export default function App() {
   const [horizon, setHorizon] = useState('weekly');
-  const [activeTab, setActiveTab] = useState('plan');
+  const [activeTab, setActiveTab] = useState('benchmark');
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [systemStatus, setSystemStatus] = useState(null);
 
@@ -144,6 +146,7 @@ export default function App() {
           <div className="flex items-center space-x-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Active View:</span>
             <span className="font-heading font-extrabold text-base text-white capitalize">
+              {activeTab === 'benchmark' && 'Controlled Synthetic Benchmark: Before vs After Optimization'}
               {activeTab === 'plan' && 'Maintenance Master Timetable'}
               {activeTab === 'map' && 'GIS Corridor & Asset Topology Map'}
               {activeTab === 'assets' && 'Asset Health & Condition Registry'}
@@ -154,6 +157,17 @@ export default function App() {
           </div>
 
           <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setActiveTab('benchmark')}
+              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
+                activeTab === 'benchmark'
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                  : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <Award className="w-3.5 h-3.5" />
+              <span>Before vs After</span>
+            </button>
             <button
               onClick={() => setActiveTab('analytics')}
               className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
@@ -170,6 +184,10 @@ export default function App() {
 
         {/* Dynamic Tab Views */}
         <div>
+          {activeTab === 'benchmark' && (
+            <BenchmarkView horizon={horizon} />
+          )}
+
           {activeTab === 'plan' && (
             <MaintenancePlanView schedule={scheduleData} />
           )}
