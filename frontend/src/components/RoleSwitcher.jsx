@@ -68,12 +68,12 @@ export default function RoleSwitcher() {
       {/* Active Persona Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2.5 p-1.5 pr-2.5 rounded-xl border border-slate-800 bg-slate-900/90 hover:bg-slate-800/80 transition-all text-left group"
+        className="flex items-center space-x-2 p-1 pl-1.5 pr-2 rounded-xl border border-slate-800 bg-slate-900/90 hover:bg-slate-800/80 transition-all text-left group shrink-0"
         title="Switch Indian Railways Persona / RBAC Role"
       >
         {/* Avatar with Initials */}
-        <div className={`w-8 h-8 rounded-lg bg-gradient-to-tr ${currentUser.avatar_color || 'from-blue-600 to-indigo-600'} p-0.5 shadow-md`}>
-          <div className="w-full h-full bg-slate-950 rounded-[6px] flex items-center justify-center font-bold text-xs text-white">
+        <div className={`w-7 h-7 rounded-lg bg-gradient-to-tr ${currentUser.avatar_color || 'from-blue-600 to-indigo-600'} p-0.5 shadow-md shrink-0`}>
+          <div className="w-full h-full bg-slate-950 rounded-[5px] flex items-center justify-center font-bold text-[11px] text-white">
             {currentUser.full_name
               .split(' ')
               .filter(n => !n.includes('(') && !n.includes('/') && !n.includes('.'))
@@ -84,21 +84,18 @@ export default function RoleSwitcher() {
         </div>
 
         {/* User Info & Role Tag */}
-        <div className="hidden sm:block text-left">
+        <div className="text-left">
           <div className="flex items-center space-x-1.5">
-            <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors">
-              {currentUser.full_name.split(',')[0]}
+            <span className="hidden xl:inline text-xs font-bold text-white group-hover:text-blue-300 transition-colors truncate max-w-[100px]">
+              {currentUser.full_name.split(' ')[0]}
             </span>
-            <span className={`text-[9px] uppercase font-mono font-bold px-1.5 py-0.2 rounded border ${badgeInfo.color}`}>
+            <span className={`text-[9px] uppercase font-mono font-bold px-1.5 py-0.5 rounded border ${badgeInfo.color}`}>
               {currentUser.role === 'CONTROLLER' ? 'CTRL' : currentUser.role.replace('_ENGINEER', '').replace('_AUDITOR', '')}
             </span>
           </div>
-          <p className="text-[10px] text-slate-400 truncate max-w-[130px]">
-            {currentUser.designation.split('(')[0]}
-          </p>
         </div>
 
-        <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform ${isOpen ? 'rotate-180 text-white' : ''}`} />
+        <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform ${isOpen ? 'rotate-180 text-white' : ''} shrink-0`} />
       </button>
 
       {/* Dropdown Menu */}
