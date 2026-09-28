@@ -1,12 +1,12 @@
 {
   "status": "Optimal",
   "schedule": {
-    "Monday, 2026-09-28": [
+    "Tuesday, 2026-09-29": [
       {
-        "block_id": "BLK0001",
+        "block_id": "BLK0009",
         "section_id": "SEC001",
-        "start_time": "2026-09-28T01:30:00",
-        "end_time": "2026-09-28T04:00:00",
+        "start_time": "2026-09-29T01:30:00",
+        "end_time": "2026-09-29T04:00:00",
         "window_display": "01:30\u201304:00",
         "duration_minutes": 150,
         "window_type": "Night Corridor (White Window)",
@@ -33,17 +33,17 @@
             "status": "Operational",
             "scheduled_start": "01:40",
             "scheduled_end": "02:40",
-            "scheduled_start_iso": "2026-09-28T01:40:00",
-            "scheduled_end_iso": "2026-09-28T02:40:00",
+            "scheduled_start_iso": "2026-09-29T01:40:00",
+            "scheduled_end_iso": "2026-09-29T02:40:00",
             "duration_minutes": 60,
             "metrics": {
               "maintenance_benefit": 75,
               "asset_criticality": 60,
               "asset_availability": 20,
-              "deadline_urgency": 50,
-              "gross_value": 205,
+              "deadline_urgency": 70,
+              "gross_value": 225,
               "allocated_ops_cost": 5.0,
-              "net_value": 200.0
+              "net_value": 220.0
             }
           },
           {
@@ -62,17 +62,17 @@
             "status": "Operational",
             "scheduled_start": "02:45",
             "scheduled_end": "03:30",
-            "scheduled_start_iso": "2026-09-28T02:45:00",
-            "scheduled_end_iso": "2026-09-28T03:30:00",
+            "scheduled_start_iso": "2026-09-29T02:45:00",
+            "scheduled_end_iso": "2026-09-29T03:30:00",
             "duration_minutes": 45,
             "metrics": {
               "maintenance_benefit": 88,
               "asset_criticality": 60,
               "asset_availability": 20,
-              "deadline_urgency": 50,
-              "gross_value": 218,
+              "deadline_urgency": 70,
+              "gross_value": 238,
               "allocated_ops_cost": 5.0,
-              "net_value": 213.0
+              "net_value": 233.0
             }
           }
         ],
@@ -88,10 +88,10 @@
         "utilization_pct": 70.0
       },
       {
-        "block_id": "BLK0004",
+        "block_id": "BLK0010",
         "section_id": "SEC002",
-        "start_time": "2026-09-28T01:45:00",
-        "end_time": "2026-09-28T04:15:00",
+        "start_time": "2026-09-29T01:45:00",
+        "end_time": "2026-09-29T04:15:00",
         "window_display": "01:45\u201304:15",
         "duration_minutes": 150,
         "window_type": "Night Corridor (White Window)",
@@ -118,17 +118,17 @@
             "status": "Operational",
             "scheduled_start": "01:55",
             "scheduled_end": "03:25",
-            "scheduled_start_iso": "2026-09-28T01:55:00",
-            "scheduled_end_iso": "2026-09-28T03:25:00",
+            "scheduled_start_iso": "2026-09-29T01:55:00",
+            "scheduled_end_iso": "2026-09-29T03:25:00",
             "duration_minutes": 90,
             "metrics": {
               "maintenance_benefit": 114,
               "asset_criticality": 80,
               "asset_availability": 20,
-              "deadline_urgency": 50,
-              "gross_value": 264,
+              "deadline_urgency": 90,
+              "gross_value": 304,
               "allocated_ops_cost": 10.0,
-              "net_value": 254.0
+              "net_value": 294.0
             }
           }
         ],
@@ -142,18 +142,20 @@
         "affected_trains": [],
         "maintenance_time_used": 90,
         "utilization_pct": 60.0
-      },
+      }
+    ],
+    "Wednesday, 2026-09-30": [
       {
-        "block_id": "BLK0002",
+        "block_id": "BLK0016",
         "section_id": "SEC001",
-        "start_time": "2026-09-28T11:30:00",
-        "end_time": "2026-09-28T13:10:00",
-        "window_display": "11:30\u201313:10",
-        "duration_minutes": 100,
-        "window_type": "Midday Shadow Window",
+        "start_time": "2026-09-30T01:30:00",
+        "end_time": "2026-09-30T04:00:00",
+        "window_display": "01:30\u201304:00",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
         "setup_phase": {
-          "start": "11:30",
-          "end": "11:40",
+          "start": "01:30",
+          "end": "01:40",
           "duration_minutes": 10,
           "description": "OHE Isolation & Track Clamping / Line Possession Memo"
         },
@@ -172,44 +174,131 @@
             "priority": "High",
             "criticality": "High",
             "status": "Operational",
-            "scheduled_start": "11:40",
-            "scheduled_end": "12:30",
-            "scheduled_start_iso": "2026-09-28T11:40:00",
-            "scheduled_end_iso": "2026-09-28T12:30:00",
+            "scheduled_start": "01:40",
+            "scheduled_end": "02:30",
+            "scheduled_start_iso": "2026-09-30T01:40:00",
+            "scheduled_end_iso": "2026-09-30T02:30:00",
             "duration_minutes": 50,
             "metrics": {
               "maintenance_benefit": 77,
               "asset_criticality": 60,
               "asset_availability": 20,
-              "deadline_urgency": 50,
-              "gross_value": 207,
+              "deadline_urgency": 90,
+              "gross_value": 247,
               "allocated_ops_cost": 10.0,
-              "net_value": 197.0
+              "net_value": 237.0
             }
           }
         ],
         "teardown_phase": {
-          "start": "12:30",
-          "end": "13:10",
-          "duration_minutes": 40,
+          "start": "02:30",
+          "end": "04:00",
+          "duration_minutes": 90,
           "description": "Track Clearance Inspection & OHE Re-energization Memo"
         },
         "operations_cost": 10,
         "affected_trains": [],
         "maintenance_time_used": 50,
-        "utilization_pct": 50.0
+        "utilization_pct": 33.3
+      }
+    ],
+    "Thursday, 2026-10-01": [
+      {
+        "block_id": "BLK0025",
+        "section_id": "SEC002",
+        "start_time": "2026-10-01T01:45:00",
+        "end_time": "2026-10-01T04:15:00",
+        "window_display": "01:45\u201304:15",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
+        "setup_phase": {
+          "start": "01:45",
+          "end": "01:55",
+          "duration_minutes": 10,
+          "description": "OHE Isolation & Track Clamping / Line Possession Memo"
+        },
+        "activities": [
+          {
+            "task_id": "MT007",
+            "task_type": "OHE Insulator Cleaning",
+            "description": "High voltage neutral section insulator washing at km 40.2",
+            "asset_id": "AST006",
+            "asset_code": "OHE-SEC002-01",
+            "asset_location_km": 40.2,
+            "department_id": "DEP002",
+            "department_name": "Traction",
+            "crew_id": "RES007",
+            "crew_name": "Traction Team 2 (OHE)",
+            "priority": "Medium",
+            "criticality": "High",
+            "status": "Operational",
+            "scheduled_start": "01:55",
+            "scheduled_end": "02:55",
+            "scheduled_start_iso": "2026-10-01T01:55:00",
+            "scheduled_end_iso": "2026-10-01T02:55:00",
+            "duration_minutes": 60,
+            "metrics": {
+              "maintenance_benefit": 56,
+              "asset_criticality": 60,
+              "asset_availability": 20,
+              "deadline_urgency": 70,
+              "gross_value": 206,
+              "allocated_ops_cost": 5.0,
+              "net_value": 201.0
+            }
+          },
+          {
+            "task_id": "MT008",
+            "task_type": "Axle Counter Calibration",
+            "description": "Digital axle counter sensor head alignment at km 47.8",
+            "asset_id": "AST007",
+            "asset_code": "SIG-SEC002-01",
+            "asset_location_km": 47.8,
+            "department_id": "DEP003",
+            "department_name": "Signalling and Telecom",
+            "crew_id": "RES004",
+            "crew_name": "S&T Team 1 (Signals)",
+            "priority": "Medium",
+            "criticality": "Medium",
+            "status": "Operational",
+            "scheduled_start": "03:00",
+            "scheduled_end": "03:45",
+            "scheduled_start_iso": "2026-10-01T03:00:00",
+            "scheduled_end_iso": "2026-10-01T03:45:00",
+            "duration_minutes": 45,
+            "metrics": {
+              "maintenance_benefit": 50,
+              "asset_criticality": 40,
+              "asset_availability": 20,
+              "deadline_urgency": 70,
+              "gross_value": 180,
+              "allocated_ops_cost": 5.0,
+              "net_value": 175.0
+            }
+          }
+        ],
+        "teardown_phase": {
+          "start": "03:45",
+          "end": "04:15",
+          "duration_minutes": 30,
+          "description": "Track Clearance Inspection & OHE Re-energization Memo"
+        },
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 105,
+        "utilization_pct": 70.0
       },
       {
-        "block_id": "BLK0006",
+        "block_id": "BLK0027",
         "section_id": "SEC003",
-        "start_time": "2026-09-28T12:10:00",
-        "end_time": "2026-09-28T13:50:00",
-        "window_display": "12:10\u201313:50",
-        "duration_minutes": 100,
-        "window_type": "Midday Shadow Window",
+        "start_time": "2026-10-01T02:00:00",
+        "end_time": "2026-10-01T04:30:00",
+        "window_display": "02:00\u201304:30",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
         "setup_phase": {
-          "start": "12:10",
-          "end": "12:20",
+          "start": "02:00",
+          "end": "02:10",
           "duration_minutes": 10,
           "description": "OHE Isolation & Track Clamping / Line Possession Memo"
         },
@@ -228,87 +317,339 @@
             "priority": "High",
             "criticality": "High",
             "status": "Operational",
-            "scheduled_start": "12:20",
-            "scheduled_end": "13:20",
-            "scheduled_start_iso": "2026-09-28T12:20:00",
-            "scheduled_end_iso": "2026-09-28T13:20:00",
+            "scheduled_start": "02:10",
+            "scheduled_end": "03:10",
+            "scheduled_start_iso": "2026-10-01T02:10:00",
+            "scheduled_end_iso": "2026-10-01T03:10:00",
             "duration_minutes": 60,
+            "metrics": {
+              "maintenance_benefit": 79,
+              "asset_criticality": 60,
+              "asset_availability": 20,
+              "deadline_urgency": 90,
+              "gross_value": 249,
+              "allocated_ops_cost": 5.0,
+              "net_value": 244.0
+            }
+          },
+          {
+            "task_id": "MT009",
+            "task_type": "Signal Interlocking Testing",
+            "description": "Route release and interlocking relay cross-talk testing at km 73.4",
+            "asset_id": "AST010",
+            "asset_code": "SIG-SEC003-01",
+            "asset_location_km": 73.4,
+            "department_id": "DEP003",
+            "department_name": "Signalling and Telecom",
+            "crew_id": "RES009",
+            "crew_name": "S&T Team 2 (Interlocking)",
+            "priority": "High",
+            "criticality": "High",
+            "status": "Operational",
+            "scheduled_start": "03:15",
+            "scheduled_end": "04:15",
+            "scheduled_start_iso": "2026-10-01T03:15:00",
+            "scheduled_end_iso": "2026-10-01T04:15:00",
+            "duration_minutes": 60,
+            "metrics": {
+              "maintenance_benefit": 80,
+              "asset_criticality": 60,
+              "asset_availability": 20,
+              "deadline_urgency": 50,
+              "gross_value": 210,
+              "allocated_ops_cost": 5.0,
+              "net_value": 205.0
+            }
+          }
+        ],
+        "teardown_phase": {
+          "start": "04:15",
+          "end": "04:30",
+          "duration_minutes": 15,
+          "description": "Track Clearance Inspection & OHE Re-energization Memo"
+        },
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 120,
+        "utilization_pct": 80.0
+      }
+    ],
+    "Friday, 2026-10-02": [
+      {
+        "block_id": "BLK0034",
+        "section_id": "SEC003",
+        "start_time": "2026-10-02T02:00:00",
+        "end_time": "2026-10-02T04:30:00",
+        "window_display": "02:00\u201304:30",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
+        "setup_phase": {
+          "start": "02:00",
+          "end": "02:10",
+          "duration_minutes": 10,
+          "description": "OHE Isolation & Track Clamping / Line Possession Memo"
+        },
+        "activities": [
+          {
+            "task_id": "MT006",
+            "task_type": "Track Thermit Welding Repair",
+            "description": "Execution of weld repair conditional on USFD inspection findings",
+            "asset_id": "AST008",
+            "asset_code": "TRK-SEC003-01",
+            "asset_location_km": 59.3,
+            "department_id": "DEP001",
+            "department_name": "Engineering",
+            "crew_id": "RES006",
+            "crew_name": "Rail Welding Unit 01",
+            "priority": "High",
+            "criticality": "High",
+            "status": "Operational",
+            "scheduled_start": "02:10",
+            "scheduled_end": "03:25",
+            "scheduled_start_iso": "2026-10-02T02:10:00",
+            "scheduled_end_iso": "2026-10-02T03:25:00",
+            "duration_minutes": 75,
+            "metrics": {
+              "maintenance_benefit": 89,
+              "asset_criticality": 60,
+              "asset_availability": 20,
+              "deadline_urgency": 70,
+              "gross_value": 239,
+              "allocated_ops_cost": 10.0,
+              "net_value": 229.0
+            }
+          }
+        ],
+        "teardown_phase": {
+          "start": "03:25",
+          "end": "04:30",
+          "duration_minutes": 65,
+          "description": "Track Clearance Inspection & OHE Re-energization Memo"
+        },
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 75,
+        "utilization_pct": 50.0
+      }
+    ],
+    "Saturday, 2026-10-03": [
+      {
+        "block_id": "BLK0043",
+        "section_id": "SEC004",
+        "start_time": "2026-10-03T02:15:00",
+        "end_time": "2026-10-03T04:45:00",
+        "window_display": "02:15\u201304:45",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
+        "setup_phase": {
+          "start": "02:15",
+          "end": "02:25",
+          "duration_minutes": 10,
+          "description": "OHE Isolation & Track Clamping / Line Possession Memo"
+        },
+        "activities": [
+          {
+            "task_id": "MT011",
+            "task_type": "OHE Catenary Wire Inspection",
+            "description": "Tower wagon catenary tensioner and dropper inspection at km 96.5",
+            "asset_id": "AST012",
+            "asset_code": "OHE-SEC004-01",
+            "asset_location_km": 96.5,
+            "department_id": "DEP002",
+            "department_name": "Traction",
+            "crew_id": "RES008",
+            "crew_name": "OHE Tower Wagon 01",
+            "priority": "High",
+            "criticality": "High",
+            "status": "Operational",
+            "scheduled_start": "02:25",
+            "scheduled_end": "03:35",
+            "scheduled_start_iso": "2026-10-03T02:25:00",
+            "scheduled_end_iso": "2026-10-03T03:35:00",
+            "duration_minutes": 70,
             "metrics": {
               "maintenance_benefit": 79,
               "asset_criticality": 60,
               "asset_availability": 20,
               "deadline_urgency": 70,
               "gross_value": 229,
-              "allocated_ops_cost": 123.0,
-              "net_value": 106.0
+              "allocated_ops_cost": 5.0,
+              "net_value": 224.0
+            }
+          },
+          {
+            "task_id": "MT010",
+            "task_type": "Track Gauge & Cross-Level Check",
+            "description": "Digital track gauge measurement along 27km stretch at km 86.2",
+            "asset_id": "AST011",
+            "asset_code": "TRK-SEC004-01",
+            "asset_location_km": 86.2,
+            "department_id": "DEP001",
+            "department_name": "Engineering",
+            "crew_id": "RES002",
+            "crew_name": "Engineering Team 2 (P-Way)",
+            "priority": "Medium",
+            "criticality": "Medium",
+            "status": "Operational",
+            "scheduled_start": "03:40",
+            "scheduled_end": "04:35",
+            "scheduled_start_iso": "2026-10-03T03:40:00",
+            "scheduled_end_iso": "2026-10-03T04:35:00",
+            "duration_minutes": 55,
+            "metrics": {
+              "maintenance_benefit": 51,
+              "asset_criticality": 40,
+              "asset_availability": 20,
+              "deadline_urgency": 70,
+              "gross_value": 181,
+              "allocated_ops_cost": 5.0,
+              "net_value": 176.0
             }
           }
         ],
         "teardown_phase": {
-          "start": "13:20",
-          "end": "13:50",
-          "duration_minutes": 30,
+          "start": "04:35",
+          "end": "04:45",
+          "duration_minutes": 10,
           "description": "Track Clearance Inspection & OHE Re-energization Memo"
         },
-        "operations_cost": 123,
-        "affected_trains": [
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 125,
+        "utilization_pct": 83.3
+      }
+    ],
+    "Sunday, 2026-10-04": [
+      {
+        "block_id": "BLK0049",
+        "section_id": "SEC003",
+        "start_time": "2026-10-04T02:00:00",
+        "end_time": "2026-10-04T04:30:00",
+        "window_display": "02:00\u201304:30",
+        "duration_minutes": 150,
+        "window_type": "Night Corridor (White Window)",
+        "setup_phase": {
+          "start": "02:00",
+          "end": "02:10",
+          "duration_minutes": 10,
+          "description": "OHE Isolation & Track Clamping / Line Possession Memo"
+        },
+        "activities": [
           {
-            "train_id": "TR004",
-            "train_type": "passenger",
-            "priority": "medium",
-            "overlap_minutes": 35,
-            "type_cost": 10,
-            "priority_cost": 10,
-            "duration_cost": 35,
-            "total_cost": 55
-          },
-          {
-            "train_id": "TR005",
-            "train_type": "express",
-            "priority": "medium",
-            "overlap_minutes": 30,
-            "type_cost": 18,
-            "priority_cost": 10,
-            "duration_cost": 30,
-            "total_cost": 58
+            "task_id": "MT013",
+            "task_type": "OHE Isolator Switch Maintenance",
+            "description": "Section insulator blade contact resistance test at km 66.7",
+            "asset_id": "AST009",
+            "asset_code": "OHE-SEC003-01",
+            "asset_location_km": 66.7,
+            "department_id": "DEP002",
+            "department_name": "Traction",
+            "crew_id": "RES003",
+            "crew_name": "Traction Team 1 (OHE)",
+            "priority": "Medium",
+            "criticality": "Medium",
+            "status": "Operational",
+            "scheduled_start": "02:10",
+            "scheduled_end": "03:00",
+            "scheduled_start_iso": "2026-10-04T02:10:00",
+            "scheduled_end_iso": "2026-10-04T03:00:00",
+            "duration_minutes": 50,
+            "metrics": {
+              "maintenance_benefit": 50,
+              "asset_criticality": 40,
+              "asset_availability": 20,
+              "deadline_urgency": 70,
+              "gross_value": 180,
+              "allocated_ops_cost": 10.0,
+              "net_value": 170.0
+            }
           }
         ],
-        "maintenance_time_used": 60,
-        "utilization_pct": 60.0
+        "teardown_phase": {
+          "start": "03:00",
+          "end": "04:30",
+          "duration_minutes": 90,
+          "description": "Track Clearance Inspection & OHE Re-energization Memo"
+        },
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 50,
+        "utilization_pct": 33.3
+      },
+      {
+        "block_id": "BLK0046",
+        "section_id": "SEC001",
+        "start_time": "2026-10-04T11:30:00",
+        "end_time": "2026-10-04T13:10:00",
+        "window_display": "11:30\u201313:10",
+        "duration_minutes": 100,
+        "window_type": "Midday Shadow Window",
+        "setup_phase": {
+          "start": "11:30",
+          "end": "11:40",
+          "duration_minutes": 10,
+          "description": "OHE Isolation & Track Clamping / Line Possession Memo"
+        },
+        "activities": [
+          {
+            "task_id": "MT012",
+            "task_type": "Track Fastener Replacement",
+            "description": "ERC clip and rubber pad replacement at km 18.2",
+            "asset_id": "AST002",
+            "asset_code": "TRK-SEC001-02",
+            "asset_location_km": 18.2,
+            "department_id": "DEP001",
+            "department_name": "Engineering",
+            "crew_id": "RES001",
+            "crew_name": "Engineering Team 1 (P-Way)",
+            "priority": "Medium",
+            "criticality": "Medium",
+            "status": "Operational",
+            "scheduled_start": "11:40",
+            "scheduled_end": "12:45",
+            "scheduled_start_iso": "2026-10-04T11:40:00",
+            "scheduled_end_iso": "2026-10-04T12:45:00",
+            "duration_minutes": 65,
+            "metrics": {
+              "maintenance_benefit": 49,
+              "asset_criticality": 40,
+              "asset_availability": 20,
+              "deadline_urgency": 90,
+              "gross_value": 199,
+              "allocated_ops_cost": 10.0,
+              "net_value": 189.0
+            }
+          }
+        ],
+        "teardown_phase": {
+          "start": "12:45",
+          "end": "13:10",
+          "duration_minutes": 25,
+          "description": "Track Clearance Inspection & OHE Re-energization Memo"
+        },
+        "operations_cost": 10,
+        "affected_trains": [],
+        "maintenance_time_used": 65,
+        "utilization_pct": 65.0
       }
     ]
   },
-  "unassigned_tasks": [
-    {
-      "task_id": "MT006",
-      "asset_id": "AST008",
-      "department_id": "DEP001",
-      "task_type": "Track Thermit Welding Repair",
-      "priority": "High",
-      "duration_minutes": 75,
-      "deadline": "2026-09-29T18:00:00",
-      "required_resource_id": "RES006",
-      "status": "Pending",
-      "depends_on": "MT005",
-      "recurring_interval_days": null,
-      "description": "Execution of weld repair conditional on USFD inspection findings"
-    }
-  ],
+  "unassigned_tasks": [],
   "summary": {
-    "horizon": "daily",
-    "tasks_scheduled": 5,
-    "tasks_total": 6,
-    "tasks_unassigned": 1,
-    "blocks_activated": 4,
-    "blocks_total": 8,
-    "total_maintenance_benefit": 433,
-    "total_asset_criticality": 320,
-    "total_asset_availability": 100,
-    "total_deadline_urgency": 270,
-    "total_gross_value": 1123,
-    "total_operations_cost": 153,
-    "total_net_value": 970,
-    "objective_value": 985.0,
-    "solve_time_seconds": 0.03
+    "horizon": "weekly",
+    "tasks_scheduled": 13,
+    "tasks_total": 13,
+    "tasks_unassigned": 0,
+    "blocks_activated": 9,
+    "blocks_total": 52,
+    "total_maintenance_benefit": 937,
+    "total_asset_criticality": 720,
+    "total_asset_availability": 260,
+    "total_deadline_urgency": 970,
+    "total_gross_value": 2887,
+    "total_operations_cost": 90,
+    "total_net_value": 2797,
+    "objective_value": 2857.0,
+    "solve_time_seconds": 0.11
   }
 }
