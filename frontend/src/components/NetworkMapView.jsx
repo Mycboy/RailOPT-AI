@@ -28,7 +28,7 @@ const SECTIONS = [
   { id: 'SEC004', from: 'ST004', to: 'ST005', length: 27, traffic: 'Medium', color: '#10b981' },
 ];
 
-export default function NetworkMapView({ assets, blocks, schedule }) {
+export default function NetworkMapView({ assets, blocks, schedule, onSimulateFailure }) {
   const [selectedAsset, setSelectedAsset] = useState(null);
   const [filterType, setFilterType] = useState('ALL');
 
@@ -210,6 +210,62 @@ export default function NetworkMapView({ assets, blocks, schedule }) {
           </div>
         </div>
       </div>
+
+      {/* Selected Asset Detailed Inspection Panel */}
+      {selectedAsset && (
+        <div className="glass-panel p-4 rounded-2xl border border-blue-500/40 bg-slate-900/95 shadow-2xl flex flex-wrap items-center justify-between gap-4 animate-in fade-in duration-150">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+              <Wrench className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="font-mono font-extrabold text-sm text-white">{selectedAsset.asset_id}</span>
+                <span className="text-slate-500">•</span>
+                <span className="font-bold text-xs text-slate-200">{selectedAsset.asset_code}</span>
+                <span className={`text-[10px] font-bold px-2 py-0.5 rounded border ${
+                  selectedAsset.criticality === 'Critical' ? 'bg-rose-500/20 text-rose-400 border-rose-500/30' : 'bg-blue-500/20 text-blue-400 border-blue-500/30'
+                }`}>
+                  {selectedAsset.criticality}
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Type: <span className="text-slate-200 font-semibold">{selectedAsset.asset_type}</span> • Corridor: <span className="text-slate-200 font-semibold">{selectedAsset.section_id} (km {selectedAsset.location_km})</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-5 text-xs">
+            <div>
+              <span className="text-[10px] text-slate-500 uppercase font-bold block">Condition Health</span>
+              <span className={`text-base font-mono font-extrabold ${selectedAsset.condition_score < 70 ? 'text-amber-400' : 'text-emerald-400'}`}>
+                {selectedAsset.condition_score}/100
+              </span>
+            </div>
+            <div>
+              <span className="text-[10px] text-slate-500 uppercase font-bold block">Telemetry Status</span>
+              <span className="text-emerald-400 font-bold flex items-center space-x-1">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>{selectedAsset.status}</span>
+              </span>
+            </div>
+            {onSimulateFailure && (
+              <button
+                onClick={() => onSimulateFailure(selectedAsset.asset_id)}
+                className="px-3 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 text-xs font-bold transition-all shadow-sm"
+              >
+                Simulate Failure
+              </button>
+            )}
+            <button
+              onClick={() => setSelectedAsset(null)}
+              className="text-slate-400 hover:text-white text-xs font-semibold px-2 py-1 rounded hover:bg-slate-800 transition-colors"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

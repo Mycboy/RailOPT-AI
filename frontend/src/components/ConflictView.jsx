@@ -6,11 +6,12 @@ import {
   MapPin, 
   ShieldAlert, 
   TrendingDown, 
-  CheckCircle,
-  HelpCircle
+  CheckCircle, 
+  HelpCircle,
+  Sparkles
 } from 'lucide-react';
 
-export default function ConflictView({ conflicts }) {
+export default function ConflictView({ conflicts, onResolveConflicts }) {
   const [filterSeverity, setFilterSeverity] = useState('ALL');
 
   const conflictList = conflicts?.conflicts || [];
@@ -91,26 +92,38 @@ export default function ConflictView({ conflicts }) {
       </div>
 
       {/* Filter Toolbar */}
-      <div className="glass-panel p-3 rounded-xl border border-slate-800 flex items-center justify-between">
+      <div className="glass-panel p-3 rounded-xl border border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center space-x-2 text-xs text-slate-300 font-semibold">
           <AlertTriangle className="w-4 h-4 text-amber-400" />
           <span>Train Conflict & Operational Impact Registry</span>
         </div>
 
-        <div className="flex items-center space-x-1">
-          {['ALL', 'Critical', 'High', 'Medium', 'Low'].map((sev) => (
+        <div className="flex items-center space-x-2">
+          {onResolveConflicts && (
             <button
-              key={sev}
-              onClick={() => setFilterSeverity(sev)}
-              className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all ${
-                filterSeverity === sev
-                  ? 'bg-blue-600 text-white'
-                  : 'text-slate-400 hover:text-slate-200 bg-slate-900'
-              }`}
+              onClick={onResolveConflicts}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-blue-500/25 active:scale-95 transition-all"
             >
-              {sev}
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Resolve via CP-SAT White Windows</span>
             </button>
-          ))}
+          )}
+
+          <div className="flex items-center space-x-1">
+            {['ALL', 'Critical', 'High', 'Medium', 'Low'].map((sev) => (
+              <button
+                key={sev}
+                onClick={() => setFilterSeverity(sev)}
+                className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all ${
+                  filterSeverity === sev
+                    ? 'bg-blue-600 text-white'
+                    : 'text-slate-400 hover:text-slate-200 bg-slate-900'
+                }`}
+              >
+                {sev}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

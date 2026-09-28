@@ -63,8 +63,12 @@ const SCENARIOS = [
   },
 ];
 
-export default function ScenarioSandbox({ horizon = 'weekly' }) {
-  const [selectedScenario, setSelectedScenario] = useState('D');
+import { useAuth } from '../context/AuthContext';
+import { Lock } from 'lucide-react';
+
+export default function ScenarioSandbox({ horizon = 'weekly', initialScenario = 'D' }) {
+  const { currentUser, isController } = useAuth();
+  const [selectedScenario, setSelectedScenario] = useState(initialScenario);
   const [isRunning, setIsRunning] = useState(false);
   const [comparison, setComparison] = useState(null);
   const [error, setError] = useState(null);
@@ -79,11 +83,22 @@ export default function ScenarioSandbox({ horizon = 'weekly' }) {
       setComparison(data);
     } catch (err) {
       console.error('Failed to run scenario', err);
-      setError('Could not run scenario on server. Check backend status.');
+      if (err.response?.status === 403) {
+        setError('Action Restricted: Only Chief Section Controllers (DOM) can execute What-If simulations. Switch to Rajesh Sharma in the top right.');
+      } else {
+        setError('Could not run scenario on server. Check backend status.');
+      }
     } finally {
       setIsRunning(false);
     }
   };
+
+  React.useEffect(() => {
+    if (initialScenario) {
+      setSelectedScenario(initialScenario);
+      handleRunScenario(initialScenario);
+    }
+  }, [initialScenario, horizon]);
 
   return (
     <div className="space-y-6">
@@ -103,6 +118,21 @@ export default function ScenarioSandbox({ horizon = 'weekly' }) {
           </div>
         </div>
       </div>
+
+      {/* RBAC Notice if not Controller */}
+      {!isController && currentUser && (
+        <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center justify-between animate-in fade-in duration-150">
+          <div className="flex items-center space-x-2">
+            <Lock className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>
+              Simulation Dispatch is restricted to <strong>Chief Section Controllers (DOM)</strong>. Switch to Rajesh Sharma in the top right to execute live What-If solver runs.
+            </span>
+          </div>
+          <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 border border-amber-500/30 shrink-0">
+            READ-ONLY AUDIT
+          </span>
+        </div>
+      )}
 
       {/* Scenario Selection Grid */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3">

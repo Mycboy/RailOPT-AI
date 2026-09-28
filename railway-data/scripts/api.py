@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from fastapi import FastAPI, Query, HTTPException, BackgroundTasks, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -48,6 +48,7 @@ class State:
     active_dataset: Dict[str, Any] = {}
     latest_schedule_result: Dict[str, Any] = {}
     scenario_engine: ScenarioEngine = ScenarioEngine(horizon="weekly")
+    custom_submitted_tasks: List[Dict[str, Any]] = []
 
 state = State()
 
@@ -57,6 +58,12 @@ def initialize_state(horizon="weekly"):
     state.dataset_manager = RailwayDatasetManager()
     state.active_dataset = state.dataset_manager.build_dataset(horizon)
     state.scenario_engine = ScenarioEngine(horizon=horizon)
+
+    # Re-inject user-submitted custom tasks so they survive re-optimization across horizons
+    existing_ids = {t["task_id"] for t in state.active_dataset.get("maintenance_tasks", [])}
+    for custom_task in state.custom_submitted_tasks:
+        if custom_task["task_id"] not in existing_ids:
+            state.active_dataset["maintenance_tasks"].append(custom_task)
 
     # Pre-run baseline optimization
     optimizer = RailwayOptimizer(
@@ -289,11 +296,25 @@ def get_schedule(
         if matched_blocks:
             filtered[day_key] = matched_blocks
 
+    # Identify scheduled task IDs across all days
+    scheduled_task_ids = set()
+    for day_key, blocks in raw_schedule.items():
+        for b in blocks:
+            for act in b.get("activities", []):
+                scheduled_task_ids.add(act.get("task_id"))
+
+    # Collect pending / unassigned tasks awaiting possession grant
+    pending_tasks = [
+        t for t in state.active_dataset.get("maintenance_tasks", [])
+        if t.get("task_id") not in scheduled_task_ids
+    ]
+
     return {
         "horizon": state.active_horizon,
         "summary": state.latest_schedule_result.get("summary", {}),
         "days_count": len(filtered),
-        "schedule": filtered
+        "schedule": filtered,
+        "pending_tasks": pending_tasks
     }
 
 
@@ -421,10 +442,18 @@ def create_task(
     new_id = f"MT{len(tasks) + 1:03d}"
     
     crew_role = "TRK_INSPECTION"
+    res_id = "RES001"
     if req.department_id == "DEP002":
         crew_role = "OHE_LINE"
+        res_id = "RES003"
     elif req.department_id == "DEP003":
         crew_role = "SIG_CIRCUIT"
+        res_id = "RES005"
+
+    prio_str = "Critical" if req.priority == 1 else ("High" if req.priority == 2 else "Medium")
+    # Base date is 2026-09-28T00:00:00 (corridor timeline start)
+    base_date = datetime(2026, 9, 28, 6, 0, 0)
+    computed_deadline = (base_date + timedelta(hours=max(req.deadline_hours, 48))).isoformat()
 
     new_task = {
         "task_id": new_id,
@@ -432,14 +461,17 @@ def create_task(
         "task_type": req.task_type,
         "department_id": req.department_id,
         "duration_minutes": req.duration_minutes,
-        "priority": req.priority,
+        "priority": prio_str,
+        "deadline": computed_deadline,
         "deadline_hours": req.deadline_hours,
+        "required_resource_id": res_id,
         "required_crew_role": crew_role,
-        "status": "Pending Allocation",
+        "status": "Pending",
         "submitted_by": f"{current_user.get('full_name')} ({current_user.get('badge_id')})",
         "submission_time": datetime.utcnow().isoformat()
     }
     tasks.append(new_task)
+    state.custom_submitted_tasks.append(new_task)
     
     return {
         "status": "Success",

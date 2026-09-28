@@ -34,9 +34,11 @@ function DashboardContent() {
   // Core Data
   const [kpis, setKpis] = useState(null);
   const [scheduleData, setScheduleData] = useState(null);
+  const [pendingTasks, setPendingTasks] = useState([]);
   const [assets, setAssets] = useState([]);
   const [conflicts, setConflicts] = useState(null);
   const [blocks, setBlocks] = useState([]);
+  const [targetScenarioId, setTargetScenarioId] = useState('D');
 
   // Fetch initial data
   const fetchData = async (currentHorizon = horizon) => {
@@ -56,6 +58,7 @@ function DashboardContent() {
       if (schedRes && schedRes.schedule) {
         setScheduleData(schedRes.schedule);
         if (schedRes.summary) setKpis(schedRes.summary);
+        if (schedRes.pending_tasks) setPendingTasks(schedRes.pending_tasks);
       }
 
       // 4. Fetch assets
@@ -84,22 +87,25 @@ function DashboardContent() {
     fetchData(horizon);
   }, [horizon]);
 
-  // Handle Horizon Change
+  // Handle Horizon Change (Controller re-optimizes, Engineers load read-only)
   const handleHorizonChange = async (newHorizon) => {
     setHorizon(newHorizon);
-    setIsOptimizing(true);
-    try {
-      const res = await apiService.optimizeSchedule(newHorizon);
-      if (res && res.schedule) {
-        setScheduleData(res.schedule);
-        setKpis(res.summary);
+    if (currentUser?.can_optimize) {
+      setIsOptimizing(true);
+      try {
+        const res = await apiService.optimizeSchedule(newHorizon);
+        if (res && res.schedule) {
+          setScheduleData(res.schedule);
+          setKpis(res.summary);
+          if (res.pending_tasks) setPendingTasks(res.pending_tasks);
+        }
+      } catch (err) {
+        console.error('Failed to optimize for horizon', err);
+      } finally {
+        setIsOptimizing(false);
       }
-      await fetchData(newHorizon);
-    } catch (err) {
-      console.error('Failed to optimize for horizon', err);
-    } finally {
-      setIsOptimizing(false);
     }
+    await fetchData(newHorizon);
   };
 
   // Handle Live Re-Optimize
@@ -110,6 +116,7 @@ function DashboardContent() {
       if (res && res.schedule) {
         setScheduleData(res.schedule);
         setKpis(res.summary);
+        if (res.pending_tasks) setPendingTasks(res.pending_tasks);
       }
       await fetchData(horizon);
     } catch (err) {
@@ -119,8 +126,9 @@ function DashboardContent() {
     }
   };
 
-  // Handle Failure Simulation from Asset Card
+  // Handle Failure Simulation from Asset Card (Pre-selects Scenario D)
   const handleSimulateFailure = (assetId) => {
+    setTargetScenarioId('D');
     setActiveTab('scenarios');
   };
 
@@ -210,7 +218,12 @@ function DashboardContent() {
           )}
 
           {activeTab === 'plan' && (
-            <MaintenancePlanView schedule={scheduleData} />
+            <MaintenancePlanView 
+              schedule={scheduleData} 
+              pendingTasks={pendingTasks}
+              onApproveAndSchedule={handleOptimize}
+              isOptimizing={isOptimizing}
+            />
           )}
 
           {activeTab === 'map' && (
@@ -218,6 +231,7 @@ function DashboardContent() {
               assets={assets}
               blocks={blocks}
               schedule={scheduleData}
+              onSimulateFailure={handleSimulateFailure}
             />
           )}
 
@@ -230,11 +244,17 @@ function DashboardContent() {
           )}
 
           {activeTab === 'conflicts' && (
-            <ConflictView conflicts={conflicts} />
+            <ConflictView 
+              conflicts={conflicts} 
+              onResolveConflicts={handleOptimize}
+            />
           )}
 
           {activeTab === 'scenarios' && (
-            <ScenarioSandbox horizon={horizon} />
+            <ScenarioSandbox 
+              horizon={horizon} 
+              initialScenario={targetScenarioId}
+            />
           )}
 
           {activeTab === 'analytics' && (
