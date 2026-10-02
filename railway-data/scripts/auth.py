@@ -53,6 +53,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "benchmark:view"
     ],
     RailwayRoles.PWAY_ENGINEER: [
+        "scenario:run",
         "task:create",
         "task:view",
         "asset:view",
@@ -60,6 +61,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "benchmark:view"
     ],
     RailwayRoles.OHE_ENGINEER: [
+        "scenario:run",
         "task:create",
         "task:view",
         "asset:view",
@@ -67,6 +69,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "benchmark:view"
     ],
     RailwayRoles.SAFETY_AUDITOR: [
+        "scenario:run",
         "safety:audit",
         "conflict:view",
         "schedule:view",

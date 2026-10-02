@@ -259,6 +259,7 @@ def post_optimize(
 
 @app.get("/schedule")
 def get_schedule(
+    horizon: Optional[str] = Query(None, description="Filter by horizon: 'daily', 'weekly', or 'monthly'"),
     day: Optional[str] = Query(None, description="Filter by day name or date (e.g. 'Monday', '2026-09-28')"),
     section_id: Optional[str] = Query(None, description="Filter by section ID (e.g. 'SEC001')"),
     department_id: Optional[str] = Query(None, description="Filter by department ID (e.g. 'DEP001')")
@@ -266,10 +267,18 @@ def get_schedule(
     """
     Retrieves the current optimized maintenance schedule with optional filtering.
     """
-    if not state.latest_schedule_result or "schedule" not in state.latest_schedule_result:
-        raise HTTPException(status_code=404, detail="No schedule generated yet. Call POST /optimize first.")
+    target_h = horizon.lower() if horizon else state.active_horizon
+    if target_h not in ("daily", "weekly", "monthly"):
+        target_h = "weekly"
 
-    raw_schedule = state.latest_schedule_result["schedule"]
+    if (
+        target_h != state.active_horizon
+        or not state.latest_schedule_result
+        or "schedule" not in state.latest_schedule_result
+    ):
+        initialize_state(target_h)
+
+    raw_schedule = state.latest_schedule_result.get("schedule", {})
     filtered = {}
 
     for day_key, blocks in raw_schedule.items():

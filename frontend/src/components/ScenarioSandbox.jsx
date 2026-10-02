@@ -83,10 +83,12 @@ export default function ScenarioSandbox({ horizon = 'weekly', initialScenario = 
       setComparison(data);
     } catch (err) {
       console.error('Failed to run scenario', err);
-      if (err.response?.status === 403) {
-        setError('Action Restricted: Only Chief Section Controllers (DOM) can execute What-If simulations. Switch to Rajesh Sharma in the top right.');
+      if (err.code === 'ECONNABORTED' || !err.response) {
+        setError('Cloud server connection timed out or is warming up from sleep (~30s). Please click "Retry Simulation" below.');
+      } else if (err.response?.status === 403) {
+        setError('Action Restricted: Switch to Chief Section Controller (Rajesh Sharma) in the top right to execute this simulation.');
       } else {
-        setError('Could not run scenario on server. Check backend status.');
+        setError(err.response?.data?.detail || 'Could not run scenario on server. Check backend status.');
       }
     } finally {
       setIsRunning(false);
@@ -118,21 +120,6 @@ export default function ScenarioSandbox({ horizon = 'weekly', initialScenario = 
           </div>
         </div>
       </div>
-
-      {/* RBAC Notice if not Controller */}
-      {!isController && currentUser && (
-        <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center justify-between animate-in fade-in duration-150">
-          <div className="flex items-center space-x-2">
-            <Lock className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>
-              Simulation Dispatch is restricted to <strong>Chief Section Controllers (DOM)</strong>. Switch to Rajesh Sharma in the top right to execute live What-If solver runs.
-            </span>
-          </div>
-          <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 border border-amber-500/30 shrink-0">
-            READ-ONLY AUDIT
-          </span>
-        </div>
-      )}
 
       {/* Scenario Selection Grid */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
@@ -186,6 +173,33 @@ export default function ScenarioSandbox({ horizon = 'weekly', initialScenario = 
           );
         })}
       </div>
+
+      {/* Loading State */}
+      {isRunning && !comparison && (
+        <div className="glass-panel p-12 rounded-2xl border border-slate-800 text-center space-y-3">
+          <RotateCw className="w-8 h-8 text-blue-400 animate-spin mx-auto" />
+          <h4 className="text-sm font-bold text-white">Running What-If CP-SAT Simulation...</h4>
+          <p className="text-xs text-slate-400 max-w-md mx-auto">
+            Computing network train paths, crew re-allocations, and track possession buffers for Scenario {selectedScenario}.
+          </p>
+        </div>
+      )}
+
+      {/* Error State with Retry Button */}
+      {error && !isRunning && (
+        <div className="glass-panel p-6 rounded-2xl border border-rose-500/30 bg-rose-500/10 text-center space-y-3">
+          <AlertTriangle className="w-8 h-8 text-rose-400 mx-auto" />
+          <h4 className="text-sm font-bold text-white">Simulation Notice</h4>
+          <p className="text-xs text-rose-300 max-w-md mx-auto">{error}</p>
+          <button
+            onClick={() => handleRunScenario(selectedScenario)}
+            className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-md transition-all inline-flex items-center space-x-2"
+          >
+            <RotateCw className="w-3.5 h-3.5" />
+            <span>Retry Simulation</span>
+          </button>
+        </div>
+      )}
 
       {/* Comparison & Impact Analysis Results */}
       {comparison && (

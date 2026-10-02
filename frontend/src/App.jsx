@@ -53,8 +53,8 @@ function DashboardContent() {
         setKpis(kpiRes.kpis);
       }
 
-      // 3. Fetch schedule
-      const schedRes = await apiService.getSchedule();
+      // 3. Fetch schedule with current horizon
+      const schedRes = await apiService.getSchedule({ horizon: currentHorizon });
       if (schedRes && schedRes.schedule) {
         setScheduleData(schedRes.schedule);
         if (schedRes.summary) setKpis(schedRes.summary);
@@ -90,22 +90,22 @@ function DashboardContent() {
   // Handle Horizon Change (Controller re-optimizes, Engineers load read-only)
   const handleHorizonChange = async (newHorizon) => {
     setHorizon(newHorizon);
-    if (currentUser?.can_optimize) {
-      setIsOptimizing(true);
-      try {
+    setIsOptimizing(true);
+    try {
+      if (currentUser?.can_optimize) {
         const res = await apiService.optimizeSchedule(newHorizon);
         if (res && res.schedule) {
           setScheduleData(res.schedule);
           setKpis(res.summary);
           if (res.pending_tasks) setPendingTasks(res.pending_tasks);
         }
-      } catch (err) {
-        console.error('Failed to optimize for horizon', err);
-      } finally {
-        setIsOptimizing(false);
       }
+    } catch (err) {
+      console.warn('Horizon optimize deferred', err);
+    } finally {
+      setIsOptimizing(false);
+      await fetchData(newHorizon);
     }
-    await fetchData(newHorizon);
   };
 
   // Handle Live Re-Optimize

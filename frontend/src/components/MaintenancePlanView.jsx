@@ -27,6 +27,15 @@ export default function MaintenancePlanView({
   const [selectedDepartment, setSelectedDepartment] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
 
+  const daysList = schedule ? Object.keys(schedule) : [];
+
+  // Automatically reset selectedDay to ALL if switching between horizons (e.g. daily/weekly/monthly)
+  React.useEffect(() => {
+    if (selectedDay !== 'ALL' && !daysList.includes(selectedDay)) {
+      setSelectedDay('ALL');
+    }
+  }, [schedule, daysList, selectedDay]);
+
   if (!schedule || Object.keys(schedule).length === 0) {
     return (
       <div className="glass-panel rounded-2xl p-12 text-center border border-slate-800">
@@ -38,8 +47,6 @@ export default function MaintenancePlanView({
       </div>
     );
   }
-
-  const daysList = Object.keys(schedule);
 
   // Department colors
   const getDeptBadge = (deptId, deptName) => {

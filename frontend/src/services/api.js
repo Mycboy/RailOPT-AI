@@ -5,7 +5,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000
 
 const client = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 15000,
+  timeout: 90000, // 90s timeout to gracefully absorb Render free-tier cold starts (~30-50s)
   headers: {
     'Content-Type': 'application/json',
   },
@@ -87,6 +87,7 @@ export const apiService = {
   // Get Timetable Schedule
   getSchedule: async (filters = {}) => {
     const params = new URLSearchParams();
+    if (filters.horizon) params.append('horizon', filters.horizon);
     if (filters.day) params.append('day', filters.day);
     if (filters.section_id) params.append('section_id', filters.section_id);
     if (filters.department_id) params.append('department_id', filters.department_id);
